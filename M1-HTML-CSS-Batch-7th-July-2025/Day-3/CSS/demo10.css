@@ -1,0 +1,90 @@
+/* Reset default padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #2874f0;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.highlight {
+    color: #ffeb3b;
+}
+
+/* About Section */
+.about {
+    margin-top: 20px;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Formatting Tags */
+.formatting {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-left: 5px solid #ff9800;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Links Section */
+.links a {
+    color: #2874f0;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #888;
+}

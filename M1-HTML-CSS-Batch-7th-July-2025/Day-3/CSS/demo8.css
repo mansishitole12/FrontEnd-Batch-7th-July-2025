@@ -1,0 +1,79 @@
+/* External CSS for Taj Hotel Webpage */
+
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fefefe;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    background-color: #800000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.highlight {
+    color: gold;
+}
+
+/* Intro Section */
+.intro {
+    padding: 20px;
+    text-align: justify;
+}
+
+/* Facilities Section */
+.facilities {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.facilities h2 {
+    color: #800000;
+}
+
+.facilities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.facilities li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+}
+
+/* Booking Section */
+.booking {
+    background-color: #fff4e6;
+    padding: 20px;
+}
+
+.booking a {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.booking a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: #ccc;
+    padding: 15px;
+    font-size: 14px;
+}

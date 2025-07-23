@@ -1,0 +1,51 @@
+/* Universal font and layout settings */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styling */
+.header {
+  background-color: #004080;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Section Container Styling */
+.section {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Section Headings */
+h2 {
+  color: #004080;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}

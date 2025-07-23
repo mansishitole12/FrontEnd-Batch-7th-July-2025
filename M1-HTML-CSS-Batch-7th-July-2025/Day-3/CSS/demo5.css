@@ -1,0 +1,54 @@
+/* style.css */
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #800080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Container for content */
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Image styling */
+img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Link style */
+a {
+    color: #800080;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #800080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}

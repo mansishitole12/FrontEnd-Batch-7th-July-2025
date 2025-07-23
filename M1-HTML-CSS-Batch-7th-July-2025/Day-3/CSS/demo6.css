@@ -1,0 +1,58 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    background-color: #fc8019;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.highlight {
+    color: #ffe135;
+}
+
+/* Hero Image */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-img {
+    width: 150px;
+    height: auto;
+}
+
+/* Section Layout */
+.section {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
