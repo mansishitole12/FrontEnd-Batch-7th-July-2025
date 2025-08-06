@@ -1,0 +1,113 @@
+/* ------------------------ */
+/* Universal Styling        */
+/* ------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* Header Section Styling   */
+/* ------------------------ */
+#header {
+  background-color: #ffefd5;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 36px;
+  color: #2e8b57;
+}
+
+.tagline {
+  color: #696969;
+  font-size: 16px;
+}
+
+/* ------------------------ */
+/* Main Content Styling     */
+/* ------------------------ */
+.content {
+  padding: 30px;
+  background-color: #fffaf0;
+  font-family: Georgia, serif;
+}
+
+.book-title {
+  color: #483d8b;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.reviewer {
+  color: #444;
+  font-style: italic;
+}
+
+.quote {
+  background-color: #f0f8ff;
+  padding: 12px;
+  border-left: 5px solid #4682b4;
+  font-style: italic;
+  color: #2f4f4f;
+  margin-top: 10px;
+}
+
+/* ------------------------ */
+/* Contact Section Styling  */
+/* ------------------------ */
+.contact {
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact a {
+  color: #00008b;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------ */
+/* Footer Section Styling   */
+/* ------------------------ */
+#footer {
+  background-color: #e0ffff;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-text {
+  color: #333;
+  font-size: 14px;
+}
+
+/* ------------------------ */
+/* Selectors Example        */
+/* ------------------------ */
+
+/* Tag selector */
+h3 {
+  color: #8b0000;
+  margin-top: 20px;
+}
+
+/* Class selector */
+.book-title {
+  text-align: center;
+}
+
+/* ID selector */
+#contact {
+  margin-top: 20px;
+}
+
+/* Grouping selector */
+p, a, span {
+  font-size: 16px;
+}

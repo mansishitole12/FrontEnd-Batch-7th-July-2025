@@ -1,0 +1,28 @@
+body {
+    background-color: #fffaf0;
+    font-family: Tahoma, sans-serif;
+    padding: 25px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #a0522d;
+    font-size: 34px;
+  }
+  
+  .tagline {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+  }
+  
+  ul {
+    margin-left: 20px;
+    list-style: square;
+  }
+  
+  a {
+    color: #8b0000;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,83 @@
+/* Universal selector - reset default padding/margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tag selector - for body */
+body {
+  background-color: #f0fff0;
+  font-family: Verdana, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+/* ID selector - Name and Role */
+#name {
+  text-align: center;
+  font-size: 36px;
+  color: #4b0082;
+}
+
+#role {
+  text-align: center;
+  font-style: italic;
+  color: #808000;
+  margin-bottom: 20px;
+}
+
+/* Grouping selector - for headings */
+h2, h3 {
+  margin-top: 20px;
+  color: #2f4f4f;
+}
+
+/* Paragraph styling */
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Unordered list styling */
+ul {
+  margin-left: 30px;
+  margin-top: 10px;
+  list-style: square;
+}
+
+/* Anchor tag styling */
+a {
+  color: #0000cd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Class selector - for profile image */
+.profile-img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* Navbar class */
+.navbar {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Footer tag selector */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  background-color: #e6e6e6;
+  padding: 15px;
+  font-size: 14px;
+}

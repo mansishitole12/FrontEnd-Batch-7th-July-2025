@@ -1,0 +1,74 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #f5fff5;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header Styling using Class Selector */
+.name {
+  text-align: center;
+  font-size: 36px;
+  color: #2e8b57;
+}
+
+.role {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+nav a {
+  margin: 0 10px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* Hover Effect on Navigation */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Image Styling using Class */
+.profile-img {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Section Titles */
+h2 {
+  color: #2e5d8a;
+  margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 30px;
+}
+
+/* Grouped Selectors Example */
+ul, p {
+  margin-bottom: 15px;
+}
+
+/* ID Selector Example */
+#summary, #experience, #education, #contact {
+  padding: 10px;
+  border-left: 4px solid #2e8b57;
+  background-color: #f0f8ff;
+  margin-bottom: 20px;
+}

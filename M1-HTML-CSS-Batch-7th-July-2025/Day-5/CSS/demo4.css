@@ -1,0 +1,97 @@
+/* Universal Selector - Applies to All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+/* Grouping Selector - Same styles for h1, h2 */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Class Selector */
+.main-heading {
+  color: #800000;
+  font-size: 2.5em;
+}
+
+.tagline {
+  text-align: center;
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Navigation Links */
+.navbar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: #0066cc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery Container */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Art Box Styling */
+.art-box {
+  width: 200px;
+  text-align: center;
+}
+
+/* Image Styling */
+.art-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* ID Selector Example (not used here but for reference) */
+#top {
+  background-color: #fff8f8;
+  padding-bottom: 20px;
+}
+
+/* Tag Selector Example */
+p {
+  line-height: 1.6;
+}
+
+/* Universal font for anchor links */
+a {
+  font-weight: bold;
+}

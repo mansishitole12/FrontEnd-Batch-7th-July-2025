@@ -1,0 +1,82 @@
+/* Universal selector to reset margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tag selectors for body and headings */
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+/* Class selector for top section */
+.top-section {
+    background-color: #1f2937;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.about-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Styling image using class selector */
+.profile-img {
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+}
+
+/* Class selector for projects */
+.projects {
+    background-color: #e3e3e3;
+    padding: 20px;
+}
+
+/* Class selector for contact section */
+.contact-section {
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Class selector for footer */
+.footer {
+    padding: 15px;
+    text-align: center;
+    background-color: #1f2937;
+    color: white;
+}
+
+/* Tag selector for anchor links */
+a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Grouping selector for section headings */
+.about-section h2,
+.projects h2,
+.contact-section h2 {
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+/* ID selector (used for navigation/bookmark links) */
+#projects, #contact, #home {
+    scroll-margin-top: 100px;
+}

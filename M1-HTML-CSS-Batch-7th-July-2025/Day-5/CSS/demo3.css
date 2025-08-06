@@ -1,0 +1,124 @@
+/* -------------------------- */
+/* Global Reset and Body Style */
+/* -------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  color: #4b0082;
+}
+
+/* -------------------------- */
+/* Header Styles */
+/* -------------------------- */
+.main-heading {
+  text-align: center;
+  font-size: 40px;
+  color: #8b0000;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #800080;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #6a0dad;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------- */
+/* Section Heading */
+/* -------------------------- */
+h2 {
+  margin-top: 25px;
+  color: #4b0082;
+}
+
+/* -------------------------- */
+/* Venue Map Image */
+/* -------------------------- */
+.map-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #c71585;
+}
+
+/* -------------------------- */
+/* Footer */
+/* -------------------------- */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #ffe4e1;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 2px solid #dda0dd;
+}
+
+/* -------------------------- */
+/* Rangoli Section (CSS Art) */
+/* -------------------------- */
+.rangoli {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+/* Shared Circle Style */
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #d02090;
+}
+
+/* Center Circle */
+.center {
+  top: 75px;
+  left: 75px;
+  background-color: gold;
+}
+
+/* Petal Positions */
+.petal.top         { top: 0; left: 75px; }
+.petal.right       { top: 75px; left: 150px; }
+.petal.bottom      { top: 150px; left: 75px; }
+.petal.left        { top: 75px; left: 0; }
+
+/* Diagonal Petals */
+.petal.top-left     { top: 20px; left: 20px; }
+.petal.top-right    { top: 20px; left: 130px; }
+.petal.bottom-left  { top: 130px; left: 20px; }
+.petal.bottom-right { top: 130px; left: 130px; }
+
+.rangoli-label {
+  text-align: center;
+  font-style: italic;
+  color: #c71585;
+  margin-top: 10px;
+}

@@ -1,0 +1,78 @@
+/* Universal selector to reset spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5fff5;
+  padding: 20px;
+  color: #2f4f4f;
+}
+
+/* Grouping selector for all headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #228b22;
+  margin-bottom: 10px;
+}
+
+/* NGO name */
+.ngo-name {
+  text-align: center;
+  font-size: 40px;
+  color: #006400;
+}
+
+/* Tagline styling */
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+/* Navbar links */
+.navbar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #006400;
+  margin: 0 10px;
+}
+
+/* Mission image */
+.mission-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* List styling */
+ul {
+  margin-left: 40px;
+  margin-top: 10px;
+  list-style-type: square;
+}
+
+/* Anchor links */
+a {
+  color: #008000;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  background-color: #e6ffe6;
+  padding: 15px;
+  border-top: 2px solid #ccc;
+}

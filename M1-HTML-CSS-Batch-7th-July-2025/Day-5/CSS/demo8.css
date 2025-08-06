@@ -1,0 +1,73 @@
+/* Universal Selector for Default Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header-container {
+    background-color: #dc143c;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Main Container Styling */
+.main-container {
+    padding: 40px;
+    margin: 30px auto;
+    width: 70%;
+    background-color: #fff;
+    border: 2px solid #dc143c;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Highlight Class */
+.highlight {
+    color: #dc143c;
+    font-weight: bold;
+}
+
+/* Agenda Section */
+.agenda {
+    padding: 30px;
+    background-color: #f0f0f0;
+    margin: 30px auto;
+    width: 70%;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+.footer-container {
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+}
+
+/* Link Styling */
+a {
+    color: #000080;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Grouping Selectors Example */
+h1, h2, h3, h4, p {
+    margin-bottom: 15px;
+}
