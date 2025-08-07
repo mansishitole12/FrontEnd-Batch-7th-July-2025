@@ -1,0 +1,133 @@
+/* ------------------------------ */
+/* Universal Selector - Reset and Base */
+/* ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+/* ------------------------------ */
+/* Body Styling */
+/* ------------------------------ */
+body {
+  background-color: #f5f5dc;
+  padding: 30px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------------------ */
+/* Tag Selectors */
+/* ------------------------------ */
+h1, h2, h3, h4 {
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #006400;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 1px solid #aaa;
+  margin: 20px 0;
+}
+
+/* ------------------------------ */
+/* Class Selectors */
+/* ------------------------------ */
+.title {
+  font-size: 40px;
+  color: #8b0000;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.cover-img {
+  display: block;
+  width: 200px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  border: 2px solid #8b0000;
+}
+
+.nav-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shapes-section {
+  margin: 30px 0;
+}
+
+/* ------------------------------ */
+/* ID Selectors */
+/* ------------------------------ */
+#header {
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+  background-color: #f0e68c;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 3px solid #ccc;
+}
+
+/* ------------------------------ */
+/* Grouping Selector Example */
+/* ------------------------------ */
+h2, h3 {
+  border-left: 5px solid #daa520;
+  padding-left: 10px;
+}
+
+/* ------------------------------ */
+/* Custom Shapes using div */
+/* ------------------------------ */
+.shapes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Square Shape */
+.square {
+  width: 60px;
+  height: 60px;
+  background-color: #ff7f50;
+}
+
+/* Circle Shape */
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+}
+
+/* Triangle Shape */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #1e90ff;
+}

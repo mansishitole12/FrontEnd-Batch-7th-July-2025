@@ -1,0 +1,128 @@
+/* ========== UNIVERSAL SELECTOR FOR RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BODY STYLING ========== */
+body {
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 25px;
+  color: #333;
+}
+
+/* ========== HEADING STYLING ========== */
+.event-title {
+  color: #8b0000;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.event-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #000080;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* ========== NAVIGATION STYLING ========== */
+.nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  color: #8b008b;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========== IMAGE STYLING ========== */
+.banner-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.banner-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ========== PARAGRAPH & UL STYLING ========== */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 25px;
+  list-style-type: square;
+}
+
+/* ========== SHAPE DECORATIONS ========== */
+.shape-square,
+.shape-circle,
+.shape-diamond {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px;
+  background-color: #ff69b4;
+}
+
+/* Grouped shape selector */
+.shape-square,
+.shape-circle,
+.shape-diamond {
+  border: 2px solid #8b0000;
+}
+
+/* SQUARE */
+.shape-square {
+  background-color: #ffa07a;
+}
+
+/* CIRCLE */
+.shape-circle {
+  border-radius: 50%;
+  background-color: #87ceeb;
+}
+
+/* DIAMOND */
+.shape-diamond {
+  transform: rotate(45deg);
+  background-color: #90ee90;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* ========== LINK STYLES ========== */
+a {
+  color: #000080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

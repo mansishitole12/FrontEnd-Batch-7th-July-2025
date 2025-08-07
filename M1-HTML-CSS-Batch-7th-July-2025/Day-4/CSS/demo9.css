@@ -1,0 +1,119 @@
+/* ===== UNIVERSAL SELECTOR FOR RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY STYLING ===== */
+body {
+  background-color: #e0ffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+/* ===== HEADINGS & TITLE ===== */
+.school-name {
+  color: #006400;
+  text-align: center;
+  font-size: 36px;
+}
+
+.slogan {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #00008b;
+  margin-bottom: 10px;
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.nav {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.nav a {
+  color: #8b0000;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== IMAGE STYLING ===== */
+.school-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ===== SECTION STYLING ===== */
+.section {
+  background-color: #f0fff0;
+  border-left: 5px solid #006400;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/* ===== LINK STYLES ===== */
+a {
+  color: #000080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DECORATIVE SHAPES ===== */
+.shape-square,
+.shape-circle,
+.shape-diamond {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* GROUPING SELECTOR FOR SHAPE BACKGROUNDS */
+.shape-square, .shape-circle, .shape-diamond {
+  background-color: #98fb98;
+}
+
+/* SQUARE */
+.shape-square {
+  border: 2px solid #006400;
+}
+
+/* CIRCLE */
+.shape-circle {
+  border-radius: 50%;
+  border: 2px dashed #228b22;
+}
+
+/* DIAMOND */
+.shape-diamond {
+  transform: rotate(45deg);
+  border: 2px dotted #2e8b57;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
