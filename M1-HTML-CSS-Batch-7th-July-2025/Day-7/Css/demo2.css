@@ -1,0 +1,24 @@
+/*Combinator Selectors*/
+
+/*General Sibling selector (~)
+div ~ p {
+  background-color: yellow;
+}
+*/
+
+/*Adjacent Sibling selector (+)
+div + p {
+  background-color: yellow;
+}*/
+
+
+/*Child selector (>)
+div > p {
+  background-color: yellow;
+}*/
+
+
+/*Descendant selector (space)*/
+div p {
+  background-color: yellow;
+}
