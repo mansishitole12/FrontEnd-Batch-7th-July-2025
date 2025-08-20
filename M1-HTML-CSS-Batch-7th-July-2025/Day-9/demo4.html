@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Company Profile Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeveLearn Technologies Pvt. Ltd.</title>
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f7fb;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      color: #ff9800;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #e65100;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(90deg, #0d47a1, #1976d2);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* ===== CONTAINER SECTIONS ===== */
+    .section {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      width: 85%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #0d47a1;
+      border-left: 4px solid #ff9800;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== SERVICES CARDS ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service-card {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .service-card h3 {
+      color: #1976d2;
+      margin-bottom: 10px;
+    }
+
+    /* ===== NEWS SECTION ===== */
+    #news ul {
+      list-style: none;
+      padding: 0;
+    }
+    #news li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f4f4f9;
+      border-left: 4px solid #1976d2;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0d47a1;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #ffcc80;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🏢 DeveLearn Technologies Pvt. Ltd.</h1>
+    <p>Innovating the Future with Technology</p>
+  </header>
+
+  <!-- ===== MISSION SECTION ===== -->
+  <div class="section" id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      At DeveLearn, our mission is to empower businesses with <strong>AI-driven software, 
+      cloud solutions, and data-driven insights</strong> that transform industries and 
+      drive innovation worldwide.
+    </p>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>🌐 Web Development</h3>
+        <p>Modern, scalable, and responsive websites built using the latest technologies.</p>
+      </div>
+      <div class="service-card">
+        <h3>📊 Data Analytics</h3>
+        <p>Turning raw data into actionable insights with AI-powered dashboards.</p>
+      </div>
+      <div class="service-card">
+        <h3>🤖 AI & Machine Learning</h3>
+        <p>Custom AI models for automation, predictions, and smart business decisions.</p>
+      </div>
+      <div class="service-card">
+        <h3>📱 Mobile App Development</h3>
+        <p>Intuitive mobile apps for Android & iOS to enhance customer engagement.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== REAL-TIME NEWS SECTION ===== -->
+  <div class="section" id="news">
+    <h2>Latest Tech News</h2>
+    <p><em>Stay updated with real-time industry insights.</em></p>
+    <ul id="news-list">
+      <!-- News will be dynamically added here -->
+    </ul>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 DeveLearn Technologies | 
+    <a href="mailto:info@develearn.com">Contact Us</a> | 
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+  </footer>
+
+  <!-- ===== JAVASCRIPT FOR REAL-TIME NEWS ===== -->
+  <script>
+    // Fetches real-time news from a public API (placeholder API for demo)
+    async function loadNews() {
+      try {
+        const response = await fetch("https://api.sampleapis.com/futurama/episodes"); 
+        // 🔹 Replace with a real News API or company feed
+        const data = await response.json();
+        
+        const newsList = document.getElementById("news-list");
+        newsList.innerHTML = ""; // Clear old news
+
+        // Show only top 5 updates
+        data.slice(0, 5).forEach(item => {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${item.title}</strong> - ${item.desc || "Latest update in the tech world."}`;
+          newsList.appendChild(li);
+        });
+      } catch (error) {
+        console.error("Error fetching news:", error);
+        document.getElementById("news-list").innerHTML = "<li>⚠️ Unable to load news at the moment.</li>";
+      }
+    }
+
+    // Load news on page load
+    loadNews();
+  </script>
+
+</body>
+</html>

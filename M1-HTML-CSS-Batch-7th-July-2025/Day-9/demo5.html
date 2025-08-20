@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="DRDO, Defence, Research, Missiles, India">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRDO - Defence Research and Development Organisation</title>
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+      color: #f5f5f5;
+    }
+
+    h1, h2 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    a {
+      color: #00eaff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: yellow;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(0,0,0,0.9);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #00eaff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: cyan;
+      text-shadow: 0 0 12px #00ffff;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    /* ===== SECTION BOXES ===== */
+    .section {
+      background: rgba(255,255,255,0.05);
+      margin: 25px auto;
+      padding: 25px;
+      width: 85%;
+      border-left: 4px solid cyan;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+    .section h2 {
+      color: yellow;
+      border-bottom: 2px solid cyan;
+      padding-bottom: 10px;
+    }
+    .section p, .section li {
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* ===== PROJECT CARDS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .project-card {
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      border: 1px solid cyan;
+      border-radius: 8px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,255,255,0.5);
+    }
+    .project-card h3 {
+      margin: 10px 0;
+      color: #ffcc00;
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #00eaff;
+      transition: 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00eaff;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 30px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🚀 DRDO</h1>
+    <p>Defence Research and Development Organisation – Advancing India’s Defence</p>
+  </header>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <div class="section" id="about">
+    <h2>About DRDO</h2>
+    <p>
+      The Defence Research and Development Organisation (DRDO) is India’s premier agency 
+      under the Ministry of Defence. It is responsible for developing technologies for 
+      missiles, aircraft, radars, combat vehicles, and advanced weapon systems to strengthen 
+      the nation’s defence and ensure self-reliance.
+    </p>
+  </div>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <div class="section" id="projects">
+    <h2>Major Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>🔥 Agni & Prithvi Missiles</h3>
+        <p>Long-range strategic missile systems that strengthen India’s nuclear deterrence.</p>
+      </div>
+      <div class="project-card">
+        <h3>🛡️ Arjun MBT</h3>
+        <p>Main Battle Tank with advanced firepower, mobility, and protection systems.</p>
+      </div>
+      <div class="project-card">
+        <h3>✈️ Tejas LCA</h3>
+        <p>Light Combat Aircraft designed and developed for the Indian Air Force and Navy.</p>
+      </div>
+      <div class="project-card">
+        <h3>🌐 NETRA AEW&CS</h3>
+        <p>Airborne Early Warning and Control System for surveillance and intelligence.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ACHIEVEMENTS SECTION ===== -->
+  <div class="section" id="achievements">
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>Developed India’s first indigenous Ballistic Missile Defence (BMD) system.</li>
+      <li>Created advanced drones and UAV technologies for surveillance.</li>
+      <li>Played a key role in India’s nuclear deterrence and strategic capabilities.</li>
+      <li>Collaborated with ISRO for satellite-based defence technologies.</li>
+    </ul>
+  </div>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="./Images/agni5.png" alt="Agni Missile">
+      <img src="./Images/arjuntank.png" alt="Arjun Tank">
+      <img src="./Images/tejas.png" alt="Tejas LCA">
+      <img src="./Images/netra.png" alt="DRDO Netra AEW&CS">
+    </div>
+  </div>
+
+  <!-- ===== NEWS SECTION ===== -->
+  <div class="section" id="news">
+    <h2>Latest News</h2>
+    <p><em>(This section can be connected to DRDO’s official news feed or a Defence API for live updates.)</em></p>
+    <ul>
+      <li>✅ DRDO successfully tested Agni-5 with MIRV technology in 2024.</li>
+      <li>✅ Tejas Mk2 prototype under development with enhanced avionics.</li>
+      <li>✅ DRDO working on advanced hypersonic missile technology.</li>
+    </ul>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    🌐 Official Website: <a href="https://www.drdo.gov.in" target="_blank">www.drdo.gov.in</a>  
+    <br> © 2025 Defence Research and Development Organisation. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

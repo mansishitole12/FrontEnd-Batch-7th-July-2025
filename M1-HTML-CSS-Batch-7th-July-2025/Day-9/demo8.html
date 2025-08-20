@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Travel, Tours, Holidays, Tourism, Adventure, Vacation Packages">
+  <meta name="description" content="Travel Explorer offers curated holiday packages across Europe, Dubai, Himalayas, and more. Book your dream vacation today!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer - Discover the World with Us</title>
+
+  <style>
+    /* ===== GLOBAL RESET & BASE ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Verdana, sans-serif;
+      background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffcc00;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #ff6600;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(0,0,60,0.8);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-shadow: 0 0 8px #000;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 1.2rem;
+      color: #d0e0ff;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      background: rgba(0,0,0,0.65);
+      margin: 30px auto;
+      padding: 30px;
+      width: 85%;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .section h2 {
+      color: #00e6ff;
+      border-bottom: 2px solid #00e6ff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* ===== PACKAGES GRID ===== */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .package-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .package-card:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .package-card h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #ff6600;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #e65500;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: rgba(0,0,50,0.9);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #ffcc00;
+      margin: 0 8px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>✈️ Travel Explorer</h1>
+    <p>Your Gateway to the World</p>
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="#packages">Holiday Packages</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HOLIDAY PACKAGES ===== -->
+  <div class="section" id="packages">
+    <h2>🌍 Popular Holiday Packages</h2>
+    <div class="packages-grid">
+      <div class="package-card">
+        <h3>✨ Europe Tour – 10 Days</h3>
+        <p>Visit Paris, Rome & Switzerland. Includes flights, 4-star hotels, and guided tours.</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+      <div class="package-card">
+        <h3>🌆 Dubai Luxury – 7 Days</h3>
+        <p>Experience Burj Khalifa, Desert Safari & luxury shopping with premium accommodation.</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+      <div class="package-card">
+        <h3>🏔 Himalayan Trek – 5 Days</h3>
+        <p>Adventure-packed trekking experience with camping, bonfires, and scenic mountain views.</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <div class="section" id="about">
+    <h2>ℹ️ About Travel Explorer</h2>
+    <p>Founded in 2010, Travel Explorer has been curating dream holidays for over 15 years. 
+       We specialize in luxury tours, adventure holidays, and customized travel itineraries across the globe.</p>
+    <p>Our mission is to make every journey memorable with professional planning and world-class service.</p>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <div class="section" id="contact">
+    <h2>📞 Contact Us</h2>
+    <p>📍 Location: Connaught Place, New Delhi</p>
+    <p>📞 Phone: +91 88888 77777</p>
+    <p>🌐 Website: <a href="https://www.travelexplorer.com">www.travelexplorer.com</a></p>
+    <p>📧 Email: info@travelexplorer.com</p>
+    <a href="#packages" class="btn">View Packages</a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Travel Explorer Pvt. Ltd. | Follow us on 
+    <a href="#">Facebook</a> | 
+    <a href="#">Instagram</a> | 
+    <a href="#">Twitter</a>
+  </footer>
+
+</body>
+</html>

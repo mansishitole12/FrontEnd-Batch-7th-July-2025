@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="description" content="Stock Market News and Live Analysis">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 Stock Market Live Dashboard</title>
+
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f7fb url("stock-bg.jpg") no-repeat center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      font-size: 2.2rem;
+    }
+
+    hr {
+      width: 70%;
+      margin: 10px auto 30px;
+      border: 1px solid #0066cc;
+    }
+
+    /* ====== STOCK CARDS LAYOUT ====== */
+    .stock-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 85%;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid #0066cc;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 3px 5px 12px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    .card h2 {
+      color: #004d99;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #008000; /* Default green for positive */
+    }
+
+    .negative {
+      color: #cc0000; /* Red for negative change */
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      text-align: justify;
+      margin: 10px 0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== TIMESTAMP ====== */
+    #last-updated {
+      text-align: center;
+      margin: 15px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: #003366;
+      color: #fff;
+      padding: 15px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    footer a {
+      color: #ffcc66;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .stock-container {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <h1>📈 Stock Market Live Dashboard</h1>
+  <hr>
+
+  <!-- ===== LAST UPDATED TIMESTAMP ===== -->
+  <div id="last-updated">Last updated: Loading...</div>
+
+  <!-- ===== STOCK CARDS ===== -->
+  <div class="stock-container">
+    
+    <!-- Nifty 50 -->
+    <div class="card" id="nifty">
+      <h2>Nifty 50</h2>
+      <div class="price" id="nifty-price">Loading...</div>
+      <p>The Nifty 50 index represents the weighted average of 50 of the largest Indian companies listed on the NSE. It is considered a benchmark for Indian equity markets.</p>
+      <a href="https://www.moneycontrol.com/indian-indices/nifty-50-9.html" target="_blank">See Details</a>
+    </div>
+
+    <!-- Sensex -->
+    <div class="card" id="sensex">
+      <h2>BSE Sensex</h2>
+      <div class="price" id="sensex-price">Loading...</div>
+      <p>The Sensex, or BSE 30, tracks the performance of 30 established and financially sound companies across key sectors of the Indian economy.</p>
+      <a href="https://www.moneycontrol.com/indian-indices/sensex-4.html" target="_blank">See Details</a>
+    </div>
+
+    <!-- Dow Jones -->
+    <div class="card" id="dow">
+      <h2>Dow Jones (DJIA)</h2>
+      <div class="price" id="dow-price">Loading...</div>
+      <p>The Dow Jones Industrial Average is one of the most-watched indices globally, representing 30 major U.S. companies across various industries.</p>
+      <a href="https://finance.yahoo.com/quote/%5EDJI/" target="_blank">See Details</a>
+    </div>
+
+    <!-- NASDAQ -->
+    <div class="card" id="nasdaq">
+      <h2>NASDAQ</h2>
+      <div class="price" id="nasdaq-price">Loading...</div>
+      <p>The NASDAQ index is heavily weighted towards technology companies and is often seen as an indicator of tech industry performance.</p>
+      <a href="https://finance.yahoo.com/quote/%5EIXIC/" target="_blank">See Details</a>
+    </div>
+
+    <!-- Gold -->
+    <div class="card" id="gold">
+      <h2>Gold (XAU/USD)</h2>
+      <div class="price" id="gold-price">Loading...</div>
+      <p>Gold is a traditional safe-haven asset and hedge against inflation, widely tracked by traders and investors during market volatility.</p>
+      <a href="https://www.investing.com/commodities/gold" target="_blank">See Details</a>
+    </div>
+
+    <!-- Crude Oil -->
+    <div class="card" id="oil">
+      <h2>Crude Oil (WTI)</h2>
+      <div class="price" id="oil-price">Loading...</div>
+      <p>Crude oil is one of the most important commodities, influencing global markets, inflation, and energy sector performance.</p>
+      <a href="https://www.investing.com/commodities/crude-oil" target="_blank">See Details</a>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Stock Dashboard | 
+    <a href="mailto:info@stockdashboard.com">Contact</a> | 
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> | 
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+  </footer>
+
+  <!-- ===== JAVASCRIPT FOR REAL-TIME STOCK UPDATES ===== -->
+  <script>
+    // Function to fetch stock prices (using Yahoo Finance API)
+    async function fetchStockPrices() {
+      try {
+        // Fetch stock/commodity indices from Yahoo Finance
+        let response = await fetch("https://query1.finance.yahoo.com/v7/finance/quote?symbols=^NSEI,^BSESN,^DJI,^IXIC,GC=F,CL=F");
+        let data = await response.json();
+
+        // Extract values
+        let nifty = data.quoteResponse.result.find(item => item.symbol === "^NSEI");
+        let sensex = data.quoteResponse.result.find(item => item.symbol === "^BSESN");
+        let dow = data.quoteResponse.result.find(item => item.symbol === "^DJI");
+        let nasdaq = data.quoteResponse.result.find(item => item.symbol === "^IXIC");
+        let gold = data.quoteResponse.result.find(item => item.symbol === "GC=F");
+        let oil = data.quoteResponse.result.find(item => item.symbol === "CL=F");
+
+        // Update UI dynamically
+        document.getElementById("nifty-price").textContent = "₹ " + nifty.regularMarketPrice.toLocaleString();
+        document.getElementById("sensex-price").textContent = "₹ " + sensex.regularMarketPrice.toLocaleString();
+        document.getElementById("dow-price").textContent = "$ " + dow.regularMarketPrice.toLocaleString();
+        document.getElementById("nasdaq-price").textContent = "$ " + nasdaq.regularMarketPrice.toLocaleString();
+        document.getElementById("gold-price").textContent = "$ " + gold.regularMarketPrice.toLocaleString();
+        document.getElementById("oil-price").textContent = "$ " + oil.regularMarketPrice.toLocaleString();
+
+        // Highlight in red if negative
+        if (nifty.regularMarketChange < 0) document.getElementById("nifty-price").classList.add("negative");
+        if (sensex.regularMarketChange < 0) document.getElementById("sensex-price").classList.add("negative");
+        if (dow.regularMarketChange < 0) document.getElementById("dow-price").classList.add("negative");
+        if (nasdaq.regularMarketChange < 0) document.getElementById("nasdaq-price").classList.add("negative");
+        if (gold.regularMarketChange < 0) document.getElementById("gold-price").classList.add("negative");
+        if (oil.regularMarketChange < 0) document.getElementById("oil-price").classList.add("negative");
+
+        // Update "last updated" time
+        let now = new Date();
+        document.getElementById("last-updated").textContent = "Last updated: " + now.toLocaleTimeString();
+
+      } catch (error) {
+        console.error("Error fetching stock data:", error);
+        let ids = ["nifty-price","sensex-price","dow-price","nasdaq-price","gold-price","oil-price"];
+        ids.forEach(id => document.getElementById(id).textContent = "⚠ Error");
+      }
+    }
+
+    // Initial fetch on load
+    fetchStockPrices();
+
+    // Auto-refresh every 1 minute
+    setInterval(fetchStockPrices, 60000);
+  </script>
+</body>
+</html>

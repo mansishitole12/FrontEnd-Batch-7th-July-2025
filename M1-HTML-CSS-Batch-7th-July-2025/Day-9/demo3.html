@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Merchant Navy Careers and Training">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merchant Navy Careers & Training</title>
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Georgia, serif;
+      background: url("ship-bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    a {
+      color: darkgreen;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: maroon;
+    }
+
+    /* ===== HERO SECTION ===== */
+    header {
+      background: rgba(0, 0, 50, 0.6);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px black;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* ===== SECTION CONTAINER ===== */
+    .section {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 12px;
+      width: 85%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .section h2 {
+      color: navy;
+      border-left: 5px solid darkred;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== CAREER BENEFITS CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #f7f9fc;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      color: darkblue;
+      margin-bottom: 10px;
+    }
+
+    /* ===== TRAINING TABLE ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: navy;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f0f0f0;
+    }
+
+    /* ===== NEWS SECTION ===== */
+    #news ul {
+      list-style: none;
+      padding: 0;
+    }
+    #news li {
+      margin: 10px 0;
+      padding: 12px;
+      background: #eef3fa;
+      border-left: 5px solid navy;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    #news li:hover {
+      background: #dbe9f9;
+      transform: scale(1.02);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: rgba(0,0,50,0.8);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #ffcc80;
+      margin: 0 10px;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section {
+        width: 92%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <header>
+    <h1>⚓ Merchant Navy Careers</h1>
+    <p>Your Gateway to Adventure, Travel & a Rewarding Career</p>
+  </header>
+
+  <!-- ===== CAREER SECTION ===== -->
+  <div class="section" id="career">
+    <h2>Why Join Merchant Navy?</h2>
+    <p>
+      The <span style="font-weight:bold; color:maroon;">Merchant Navy</span> is the backbone of international trade.  
+      It offers exciting opportunities, global exposure, and financial stability.
+    </p>
+
+    <!-- Career Benefits as Cards -->
+    <div class="cards">
+      <div class="card">
+        <h3>🌍 Global Travel</h3>
+        <p>Explore different countries and cultures while working.</p>
+      </div>
+      <div class="card">
+        <h3>💰 High Salary</h3>
+        <p>Tax-free income and attractive perks for seafarers.</p>
+      </div>
+      <div class="card">
+        <h3>⚓ Adventure</h3>
+        <p>Work at sea with thrilling experiences and challenges.</p>
+      </div>
+      <div class="card">
+        <h3>📈 Career Growth</h3>
+        <p>Clear promotion pathways from cadet to captain.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TRAINING SECTION ===== -->
+  <div class="section" id="training">
+    <h2>Top Training Institutes</h2>
+    <p>India offers world-class maritime training. Some leading institutes are:</p>
+
+    <table>
+      <tr>
+        <th>Institute</th>
+        <th>Location</th>
+        <th>Specialization</th>
+      </tr>
+      <tr>
+        <td>T.S. Chanakya</td>
+        <td>Mumbai</td>
+        <td>Nautical Science</td>
+      </tr>
+      <tr>
+        <td>MERI (Marine Engineering & Research Institute)</td>
+        <td>Kolkata</td>
+        <td>Marine Engineering</td>
+      </tr>
+      <tr>
+        <td>Anglo-Eastern Maritime Academy</td>
+        <td>Maharashtra</td>
+        <td>Pre-Sea Training</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== REAL-TIME NEWS SECTION ===== -->
+  <div class="section" id="news">
+    <h2>Latest Maritime News</h2>
+    <p><em>Stay updated with the latest shipping and maritime industry updates.</em></p>
+    <ul id="news-list">
+      <li>⏳ Loading latest maritime news...</li>
+    </ul>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Merchant Navy Careers | 
+    <a href="mailto:info@merchantnavy.com">Email Us</a> | 
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> | 
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+  </footer>
+
+  <!-- ===== JAVASCRIPT: FETCH REAL-TIME NEWS ===== -->
+  <script>
+    async function fetchMaritimeNews() {
+      try {
+        // Example API: Currents API (or any maritime news RSS/JSON feed)
+        let response = await fetch("https://api.currentsapi.services/v1/latest-news?category=business&apiKey=YOUR_API_KEY");
+        let data = await response.json();
+
+        let newsList = document.getElementById("news-list");
+        newsList.innerHTML = ""; // Clear default loading text
+
+        // Show only first 5 articles
+        data.news.slice(0, 5).forEach(article => {
+          let li = document.createElement("li");
+          li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`;
+          newsList.appendChild(li);
+        });
+
+      } catch (error) {
+        console.error("Error fetching news:", error);
+        document.getElementById("news-list").innerHTML = "<li>⚠ Unable to load news at the moment.</li>";
+      }
+    }
+
+    // Fetch news on page load
+    fetchMaritimeNews();
+
+    // Refresh every 5 minutes
+    setInterval(fetchMaritimeNews, 300000);
+  </script>
+</body>
+</html>
