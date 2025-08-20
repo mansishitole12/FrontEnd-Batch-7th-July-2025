@@ -1,0 +1,134 @@
+
+/*1. by color name*/
+.box1 {
+  background-color: lightcoral;
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+/*2. RGB Color code*/
+.box2 {
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+/*3. HEX color code*/
+.box3{
+  background-color: #ee82ee;
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+/*4. HSL color code*/
+.box4 {
+  background-color: hsl(248, 53%, 58%);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.box5{
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.box6 {
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.box7 {
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.box8{
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.box9{
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.box10{
+  background-color: rgb(250, 205, 240);
+  width: 300px;
+  height: fit-content;
+  display: inline-block;
+  border: 5px double black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}

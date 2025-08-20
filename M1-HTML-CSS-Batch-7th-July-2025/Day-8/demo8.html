@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="MakeMyTrip - Online Travel Booking">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakeMyTrip - Travel Booking</title>
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* gradient bg */
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0d1b2a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffd700; /* Gold color for branding */
+    }
+
+    nav {
+      background: #1b263b;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url("https://www.makemytrip.com/travel-guide/images/destinations/jaipur.jpg") no-repeat center center/cover;
+      height: 60vh; /* viewport unit */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+
+    .section {
+      padding: 40px 10%;
+      background: #f8f9fa;
+      color: #000;
+    }
+
+    .section h2 {
+      color: #0d1b2a;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 30%;
+      padding: 20px;
+      color: #000;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #0d6efd;
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    /* Bookmark Section Styling */
+    #contact {
+      padding: 30px;
+      background: #2a5298;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    #contact h3 {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header Section ===== -->
+  <header>
+    <h1>MakeMyTrip</h1>
+    <p>Your one-stop solution for Flights, Hotels, and Holiday Packages</p>
+  </header>
+
+  <!-- ===== Navigation Bar ===== -->
+  <nav>
+    <a href="#flights">Flights</a>
+    <a href="#hotels">Hotels</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <div class="hero">
+    <h2>Book Your Dream Vacation Today ✈️</h2>
+  </div>
+
+  <!-- ===== Flights Section ===== -->
+  <div class="section" id="flights">
+    <h2>✈️ Flight Deals</h2>
+    <hr><br>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://content.r9cdn.net/rimg/dimg/4b/3f/f1c3a75e-city-48169-164f8a7c5c2.jpg" alt="Delhi">
+        <h3>Delhi to Mumbai</h3>
+        <p>Starting at ₹2,499</p>
+        <a href="#">Book Now</a>
+      </div>
+      <div class="card">
+        <img src="https://content.r9cdn.net/rimg/dimg/7f/fb/f97f65aa-city-48260-164f8a7b695.jpg" alt="Bangalore">
+        <h3>Bangalore to Goa</h3>
+        <p>Starting at ₹1,999</p>
+        <a href="#">Book Now</a>
+      </div>
+      <div class="card">
+        <img src="https://content.r9cdn.net/rimg/dimg/7f/9c/c35e6c83-city-46145-164f8a7c31a.jpg" alt="Kolkata">
+        <h3>Kolkata to Delhi</h3>
+        <p>Starting at ₹2,299</p>
+        <a href="#">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Hotels Section ===== -->
+  <div class="section" id="hotels">
+    <h2>🏨 Hotel Offers</h2>
+    <hr><br>
+    <p>Stay at premium hotels with exclusive discounts across India and abroad.</p>
+  </div>
+
+  <!-- ===== Holiday Packages Section ===== -->
+  <div class="section" id="packages">
+    <h2>🌍 Holiday Packages</h2>
+    <hr><br>
+    <p>Choose from exotic destinations like Bali, Maldives, Europe, and more.</p>
+  </div>
+
+  <!-- ===== Contact / Bookmark Section ===== -->
+  <div id="contact">
+    <h3>📞 Contact Us</h3>
+    <p>Email: <a href="mailto:support@makemytrip.com">support@makemytrip.com</a></p>
+    <p>Phone: +91 9876543210</p>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 MakeMyTrip | All Rights Reserved</p>
+    <a href="#top">Back to Top</a>
+  </footer>
+
+</body>
+</html>

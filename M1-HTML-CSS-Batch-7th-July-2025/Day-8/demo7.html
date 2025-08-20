@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Swiggy - Online Food Delivery Service">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Clone - Practice 7</title>
+  <style>
+    /* ===== GLOBAL STYLING ===== */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #fff5f5, #ffe6cc); /* gradient background */
+      color: #333333;
+    }
+
+    header {
+      background-color: #ff6600; /* Swiggy orange */
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #333333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      background: url("https://source.unsplash.com/1600x500/?food,delivery") no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .section {
+      padding: 30px 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+      background: #ffffff;
+      border: 2px solid #dddddd;
+      border-radius: 12px;
+    }
+
+    .section h2 {
+      color: #ff6600;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .food-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fafafa;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .food-card:hover {
+      transform: scale(1.05);
+    }
+
+    .food-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .food-card h3 {
+      margin: 10px;
+      font-size: 1.2rem;
+      color: #333333;
+    }
+
+    .food-card p {
+      margin: 0 10px 10px;
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #333333;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* ===== Example of ID Bookmark ===== */
+    #contact {
+      background: #fff3e6;
+      padding: 25px;
+      margin-top: 30px;
+      border: 2px dashed #ff6600;
+    }
+
+    #contact h2 {
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    Swiggy Clone - Online Food Delivery
+  </header>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <div class="hero" id="home">
+    Delicious food, delivered to your door 🍔
+  </div>
+
+  <!-- ===== RESTAURANTS SECTION ===== -->
+  <div class="section" id="restaurants">
+    <h2>Popular Restaurants</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+        <h3>Pizza Hut</h3>
+        <p>Cheesy pizzas starting at ₹199</p>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+        <h3>Burger King</h3>
+        <p>Juicy burgers with combo meals</p>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?indianfood" alt="Indian Food">
+        <h3>Biryani Express</h3>
+        <p>Authentic Hyderabadi Biryani</p>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?dessert" alt="Dessert">
+        <h3>Sweet Tooth</h3>
+        <p>Delicious desserts and cakes</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OFFERS SECTION ===== -->
+  <div class="section" id="offers">
+    <h2>Exciting Offers</h2>
+    <p><b>50% OFF</b> on your first order! Use code: <i>SWIGGY50</i></p>
+    <p>Get free delivery on orders above ₹499.</p>
+    <p><u>Weekend Special:</u> Flat 20% off on all desserts.</p>
+    <hr>
+    <p>Hurry up! Offers valid till <mark>Sunday</mark>.</p>
+  </div>
+
+  <!-- ===== CONTACT US SECTION WITH ID BOOKMARK ===== -->
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Location: Mumbai, India</p>
+    <p>📞 Phone: +91 9876543210</p>
+    <p>📧 Email: support@swiggyclone.com</p>
+    <p><a href="#home">Back to Top</a></p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Swiggy Clone | Built for Practice | Visit <a href="https://www.swiggy.com" target="_blank">Swiggy</a>
+  </footer>
+
+</body>
+</html>

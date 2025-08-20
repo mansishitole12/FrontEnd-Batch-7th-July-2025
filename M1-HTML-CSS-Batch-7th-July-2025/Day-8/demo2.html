@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Forest Department - Wildlife & Nature Conservation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest Department | Nature Conservation</title>
+  <style>
+    /* ==============================
+       GLOBAL STYLING
+    ===============================*/
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #c8e6c9); /* HSL + HEX colors */
+      color: #1b5e20; /* HEX green color */
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgb(27, 94, 32); /* RGB color */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #66bb6a;
+    }
+
+    h1 {
+      font-size: 2.5rem; /* rem unit */
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: hsl(120, 70%, 80%); /* HSL color */
+    }
+
+    /* Section styling */
+    .section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      border: 2px solid #2e7d32;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: darkgreen;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1b5e20;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    /* Bookmark / ID links */
+    #wildlife {
+      background: #f1f8e9;
+      border-left: 5px solid green;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER SECTION ===== -->
+  <header>
+    <h1>Forest Department</h1>
+    <p>Protecting Wildlife, Conserving Nature</p>
+    <nav>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#conservation">Conservation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO IMAGE SECTION ===== -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Forest_in_India.jpg" alt="Forest in India">
+    <p>
+      Welcome to the <span class="highlight">National Forest Department</span>.  
+      Our mission is to conserve biodiversity, protect endangered species, and create awareness 
+      about the importance of forests in maintaining ecological balance.
+    </p>
+  </div>
+
+  <!-- ===== WILDLIFE SECTION ===== -->
+  <div class="section" id="wildlife">
+    <h2>Wildlife Protection</h2>
+    <hr>
+    <p>
+      India is home to majestic animals like <b>Tigers</b>, <b>Elephants</b>, <b>Leopards</b>, and <b>Rhinos</b>.  
+      The Forest Department ensures their protection through strict laws and conservation programs.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Bengal_tiger_in_Bandhavgarh.jpg" alt="Tiger in Forest">
+  </div>
+
+  <!-- ===== CONSERVATION SECTION ===== -->
+  <div class="section" id="conservation">
+    <h2>Conservation Programs</h2>
+    <p>
+      Our initiatives include:  
+      <br> 🌱 Afforestation Drives  
+      <br> 🦉 Wildlife Sanctuaries  
+      <br> 🌍 Eco-Tourism Development  
+      <br> 📚 Environmental Education  
+    </p>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@forestdept.in">info@forestdept.in</a></p>
+    <p>Visit our official website: <a href="https://moef.gov.in" target="_blank">MoEF India</a></p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 National Forest Department | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

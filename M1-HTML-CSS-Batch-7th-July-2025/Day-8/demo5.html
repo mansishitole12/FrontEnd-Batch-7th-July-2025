@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Waste Management System - Recycling and Eco Awareness">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSmart | Waste Management System</title>
+  <style>
+    /* ==============================
+       GLOBAL STYLING
+    ===============================*/
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* HEX + gradient */
+      color: #004d40;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgb(0, 150, 136); /* RGB Teal */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #00796b;
+    }
+
+    h1 {
+      font-size: 2.5rem; /* rem unit */
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: hsl(180, 80%, 75%); /* HSL color */
+    }
+
+    /* Section styling */
+    .section {
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background: #f1f8e9;
+      border-radius: 12px;
+      border: 2px solid #00796b;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    /* Info boxes grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #4caf50;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #004d40;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    /* Bookmark styling */
+    #recycle {
+      background: #e8f5e9;
+      border-left: 5px solid green;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER SECTION ===== -->
+  <header>
+    <h1>EcoSmart Waste Management</h1>
+    <p>Reduce | Reuse | Recycle</p>
+    <nav>
+      <a href="#recycle">Recycling</a>
+      <a href="#programs">Programs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO IMAGE SECTION ===== -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Recycling_symbol2.svg" alt="Recycling Symbol">
+    <p>
+      Welcome to <span class="highlight">EcoSmart</span>, your partner in sustainable waste management.  
+      We focus on reducing waste, promoting recycling, and spreading awareness about eco-friendly living.
+    </p>
+  </div>
+
+  <!-- ===== RECYCLING SECTION ===== -->
+  <div class="section" id="recycle">
+    <h2>Recycling Process</h2>
+    <hr>
+    <p>
+      Recycling is not just about waste, it’s about creating a cleaner future.  
+      At EcoSmart, we recycle <b>plastic</b>, <b>paper</b>, <b>metal</b>, and <b>organic waste</b>  
+      to reduce landfills and save resources.
+    </p>
+  </div>
+
+  <!-- ===== PROGRAMS SECTION ===== -->
+  <div class="section" id="programs">
+    <h2>Our Key Programs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Community Cleanups</h3>
+        <p>Monthly drives in cities and villages to promote cleanliness.</p>
+      </div>
+      <div class="card">
+        <h3>School Awareness</h3>
+        <p>Workshops to educate kids about recycling and eco-habits.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Bins</h3>
+        <p>IoT-enabled bins that separate waste automatically.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@ecosmart.com">info@ecosmart.com</a></p>
+    <p>Follow us on: 
+      <a href="https://twitter.com" target="_blank">Twitter</a> | 
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 EcoSmart Waste Management | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

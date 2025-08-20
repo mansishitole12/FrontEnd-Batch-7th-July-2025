@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Netflix Clone - Movies, TV Shows, and Originals">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone | Stream Movies & Shows</title>
+  <style>
+    /* ==============================
+       GLOBAL STYLING
+    ===============================*/
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: #000000; /* HEX black */
+      color: #ffffff; /* HEX white */
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgb(20, 20, 20); /* RGB */
+      color: red;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #e50914; /* Netflix red */
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #e50914; /* HEX red */
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: hsl(0, 100%, 70%); /* HSL */
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: url("https://assets.nflxext.com/ffe/siteui/vlv3/8e4c1b2a-hero-banner.jpg") no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem; /* rem unit */
+      margin-bottom: 15px;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Categories Section */
+    .section {
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 1100px;
+      background: #141414;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    /* Login Section */
+    #login {
+      background: #111;
+      border-left: 5px solid #e50914;
+      padding: 20px;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background: #e50914;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff1e30;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #000;
+      color: #ccc;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>NETFLIX</h1>
+    <nav>
+      <a href="#movies">Movies</a>
+      <a href="#series">Series</a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div>
+      <h2>Unlimited Movies, TV Shows & More</h2>
+      <p>Watch anywhere. Cancel anytime.</p>
+    </div>
+  </section>
+
+  <!-- ===== MOVIES SECTION ===== -->
+  <div class="section" id="movies">
+    <h2>Trending Movies</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Avengers_Endgame_poster.jpg" alt="Avengers Endgame">
+        <h3>Avengers: Endgame</h3>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Spider-Man_No_Way_Home_poster.jpg" alt="Spider-Man">
+        <h3>Spider-Man: No Way Home</h3>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Inception_ver3.jpg" alt="Inception">
+        <h3>Inception</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERIES SECTION ===== -->
+  <div class="section" id="series">
+    <h2>Popular Series</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Money_Heist_poster.jpg" alt="Money Heist">
+        <h3>Money Heist</h3>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/Stranger_Things_season_3.jpg" alt="Stranger Things">
+        <h3>Stranger Things</h3>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/DarkNetflixPosterEnglish.jpg" alt="Dark">
+        <h3>Dark</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LOGIN SECTION ===== -->
+  <div class="section" id="login">
+    <h2>Login to Continue</h2>
+    <form>
+      <input type="email" placeholder="Enter Email" required><br>
+      <input type="password" placeholder="Enter Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Netflix Clone | For Educational Practice Only</p>
+  </footer>
+
+</body>
+</html>
