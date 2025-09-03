@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Shine Jewellery</title>
+  <style>
+    /* ===============================
+       GLOBAL STYLING
+       =============================== */
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fff5f5, #ffe4e1);
+      color: #2c2c2c;
+    }
+
+    /* Universal selector */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ===============================
+       HEADER SECTION
+       =============================== */
+    header {
+      background: radial-gradient(circle, #ffdfba, #d4af37);
+      color: #2c2c2c;
+      text-align: center;
+      padding: 2.5rem;
+      text-shadow: 2px 2px 5px #fff;
+      border-bottom: 5px solid #b8860b;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+
+    /* ===============================
+       NAVIGATION
+       =============================== */
+    nav {
+      background: #d4af37;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: #2c2c2c;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    /* Pseudo-class hover effect */
+    nav a:hover {
+      background: #fff8dc;
+      color: #800000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    }
+
+    /* Attribute selector */
+    nav a[href*="contact"] {
+      border: 2px solid #800000;
+    }
+
+    /* ===============================
+       SECTION STYLING
+       =============================== */
+    section {
+      padding: 2.5rem;
+      margin: 20px auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px #aaa;
+      border-bottom: 3px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* ===============================
+       PRODUCT CARDS
+       =============================== */
+    .product {
+      display: inline-block;
+      width: 28%;
+      margin: 2% 1%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 2px solid #eee;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.35);
+      border-color: #d4af37;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border: 3px solid #f8e1ba;
+      outline: 2px dashed #d4af37;
+      outline-offset: 5px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      color: #4b2e83;
+      text-shadow: 1px 1px 2px #ddd;
+    }
+
+    .price {
+      color: #800000;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    /* ===============================
+       SPECIAL OFFERS
+       =============================== */
+    #offers p {
+      background: #fffaf0;
+      padding: 15px;
+      border: 2px dashed #d2691e;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      margin-top: 15px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    /* ===============================
+       CONTACT
+       =============================== */
+    #contact p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    #contact strong {
+      color: #800000;
+    }
+
+    /* Child combinator example */
+    section > p {
+      margin-top: 15px;
+    }
+
+    /* ===============================
+       FOOTER
+       =============================== */
+    footer {
+      background: #d4af37;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 30px;
+      font-size: 1rem;
+      text-shadow: 1px 1px 3px #444;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Royal Shine Jewellery</h1>
+    <p>✨ Elegance that Speaks Luxury ✨</p>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="#collections">Collections</a>
+    <a href="#offers">Special Offers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== COLLECTIONS ===== -->
+  <section id="collections">
+    <h2>Our Featured Collections</h2>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1617038224271-504f829148d8" alt="Gold Necklace">
+      <h3>Gold Necklace</h3>
+      <p class="price">₹45,000</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1612336307429-cd438d3a8c2a" alt="Diamond Ring">
+      <h3>Diamond Ring</h3>
+      <p class="price">₹1,20,000</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1584308972061-8f08f8b0d394" alt="Earrings">
+      <h3>Designer Earrings</h3>
+      <p class="price">₹15,500</p>
+    </div>
+  </section>
+
+  <!-- ===== OFFERS ===== -->
+  <section id="offers">
+    <h2>Special Festive Offer</h2>
+    <p>Get <strong>20% Off</strong> on Gold Jewellery this Diwali! 🎉</p>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <strong>info@royalshine.com</strong></p>
+    <p>Phone: <strong>+91 98765 11111</strong></p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Royal Shine Jewellery | Crafted with Love ❤️</p>
+  </footer>
+</body>
+</html>

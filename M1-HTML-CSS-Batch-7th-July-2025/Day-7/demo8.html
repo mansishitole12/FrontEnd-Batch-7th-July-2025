@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyShow - Movie Tickets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    }
+
+    header {
+      background: #d32f2f;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background: #b71c1c;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .movie {
+      display: inline-block;
+      width: 28%;
+      margin: 2%;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .movie img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d32f2f;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      box-shadow: 1px 1px 5px #444;
+    }
+    .btn:hover {
+      background: #ff1744;
+    }
+
+    footer {
+      background: #b71c1c;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>BookMyShow</h1>
+    <p>Book Your Movie Tickets Anytime, Anywhere</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#movies">Movies</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Movies Section -->
+  <section id="movies">
+    <h2 style="text-align:center;">Now Showing</h2>
+    <div class="movie">
+      <img src="https://images.unsplash.com/photo-1608889175109-3b9b1bba4cf3" alt="Movie Poster">
+      <h3>Action Thriller</h3>
+      <p>Experience the ultimate adrenaline rush!</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+    <div class="movie">
+      <img src="https://images.unsplash.com/photo-1603970521343-b40f19a1e95d" alt="Romantic Movie">
+      <h3>Romantic Nights</h3>
+      <p>A love story that touches hearts.</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+    <div class="movie">
+      <img src="https://images.unsplash.com/photo-1598899134739-bfc1f11b89e4" alt="Comedy">
+      <h3>Comedy Express</h3>
+      <p>Laughter guaranteed from start to end.</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section id="offers">
+    <h2 style="text-align:center;">Special Offers</h2>
+    <p style="text-align:center;">Flat 20% off on first booking with code <b>NEW20</b>.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <p style="text-align:center;">Email: support@bookmyshow.com | Phone: +91 99999 11111</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BookMyShow | Entertainment Redefined</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* universal selector*/
+*{
+    background-color: rgb(248, 206, 213);
+    margin: 20px;
+    padding: 5px;
+}
+
+/* class selector*/
+.title{
+    color: blueviolet;
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* id selectors*/
+#box1{
+    background-color: rgb(171, 248, 248);
+    border: 5px double black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#box2{
+    background-color: rgb(119, 233, 169);
+    border: 5px double black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* type selectors*/
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}

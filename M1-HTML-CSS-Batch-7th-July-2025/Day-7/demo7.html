@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoWaste Management</title>
+  <style>
+    /* ====== Global Styling ====== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9); /* background gradient */
+      color: #333;
+    }
+
+    /* ====== Header Styling ====== */
+    header {
+      background: radial-gradient(circle, #388e3c, #1b5e20); /* radial background */
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      text-shadow: 2px 2px 6px #000; /* text shadow for depth */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    /* ====== Navigation Styling ====== */
+    nav {
+      background: #1b5e20;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #c8e6c9;
+      color: #1b5e20;
+      transition: 0.3s;
+    }
+
+    /* ====== Section Headings ====== */
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 30px;
+      color: #2e7d32;
+      text-shadow: 1px 1px 4px #aaa;
+      border-bottom: 3px solid #2e7d32;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* ====== Card Design ====== */
+    .card {
+      background: #fff;
+      margin: 20px auto;
+      width: 80%;
+      padding: 20px;
+      border-left: 6px solid #2e7d32;
+      border-radius: 12px;
+      box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
+      outline: 2px dashed #a5d6a7; /* outline example */
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #1b5e20;
+    }
+    .card p {
+      line-height: 1.5;
+    }
+
+    /* ====== Combinator Selectors Demo ====== */
+    section > p { 
+      font-style: italic; /* direct child selector */
+    }
+    .card h3 + p { 
+      font-weight: bold; 
+      color: #2e7d32; /* adjacent sibling selector */
+    }
+    nav a ~ a { 
+      border-left: 1px solid #fff; /* general sibling selector */
+      padding-left: 10px;
+    }
+
+    /* ====== Footer Styling ====== */
+    footer {
+      background: #1b5e20;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 30px;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.4);
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* ====== ID & Class Selectors Demo ====== */
+    #highlight {
+      background: #a5d6a7;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 8px #388e3c;
+    }
+    .green-text {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header Section ===== -->
+  <header>
+    <h1>EcoWaste Management</h1>
+    <p>Towards a Cleaner & Greener Future</p>
+  </header>
+
+  <!-- ===== Navigation Menu ===== -->
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Services Section ===== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1617965111845-871a2325405c" alt="Recycling">
+      <h3>Recycling Programs</h3>
+      <p>Segregating and recycling plastic, paper, and metal waste responsibly.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581578017421-cc69e4a50ce5" alt="Waste Collection">
+      <h3>Smart Waste Collection</h3>
+      <p>Smart bins with IoT sensors for timely collection and monitoring.</p>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects">
+    <h2>Recent Projects</h2>
+    <p id="highlight">Zero Waste Society • Green Schools • Plastic-Free Markets</p>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <span class="green-text">info@ecowaste.com</span> | Phone: +91 90000 11111</p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 EcoWaste Management | Clean India Mission</p>
+  </footer>
+</body>
+</html>

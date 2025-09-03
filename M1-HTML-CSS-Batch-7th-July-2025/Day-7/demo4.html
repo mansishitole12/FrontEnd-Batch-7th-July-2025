@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Light Department</title>
+  <style>
+    /* ===============================
+       GLOBAL RESET & UNIVERSAL SELECTOR
+       =============================== */
+    * {
+      box-sizing: border-box; /* ensures padding & border included in width/height */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===============================
+       BODY STYLING
+       =============================== */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(120deg, #f5f7fa, #c3cfe2, #eef2f3); /* gradient background */
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ===============================
+       HEADER STYLING
+       =============================== */
+    header {
+      background: rgb(34, 34, 34); /* rgb color */
+      color: #fff;
+      text-align: center;
+      padding: 3vh 2vw;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.6); /* text shadow */
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.4); /* box shadow */
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: hsl(50, 100%, 80%); /* hsl color */
+    }
+
+    /* ===============================
+       NAVIGATION
+       =============================== */
+    nav {
+      background: #444;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 3px solid #ffcc00;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+
+    /* ===============================
+       SECTIONS
+       =============================== */
+    section {
+      padding: 3rem 2rem;
+      margin: 20px auto;
+      max-width: 1000px;
+      background: #ffffffb3; /* semi-transparent white */
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #222;
+      border-bottom: 3px solid #ff6600;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Descendant & Child Combinator */
+    section > p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    /* Adjacent sibling combinator */
+    h2 + p {
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* General sibling combinator */
+    h2 ~ p {
+      font-style: italic;
+    }
+
+    /* Class selector */
+    .highlight {
+      color: #ff6600;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    /* ===============================
+       SERVICE BOX STYLING
+       =============================== */
+    .service-box {
+      background: #fff;
+      border: 2px solid #ddd;
+      outline: 3px dashed rgba(255,102,0,0.5); /* outline demo */
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05); /* zoom effect */
+      border-color: #ff6600;
+    }
+
+    .service-box h3 {
+      color: #222;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* ===============================
+       CONTACT STYLING
+       =============================== */
+    #contact img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      border: 4px solid #ffcc00;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Attribute selector */
+    a[href^="mailto"] {
+      color: #0066cc;
+    }
+
+    /* ===============================
+       FOOTER STYLING
+       =============================== */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      box-shadow: inset 0px 3px 8px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>City Light Department</h1>
+    <p>Ensuring Brightness & Safety for Every Home</p>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <hr>
+    <p>The <span class="highlight">City Light Department</span> manages streetlights, power distribution, and public safety.</p>
+    <p>We ensure <strong>24x7 uninterrupted service</strong> with modern & sustainable solutions.</p>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <h3>Street Lighting</h3>
+      <p>Installation and maintenance of smart LED streetlights for energy efficiency.</p>
+    </div>
+    <div class="service-box">
+      <h3>Power Supply</h3>
+      <p>Reliable electricity distribution for homes, offices, and industries.</p>
+    </div>
+    <div class="service-box">
+      <h3>Emergency Repairs</h3>
+      <p>Quick response team available <u>24/7</u> for emergencies & outages.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:support@citylight.gov">support@citylight.gov</a></p>
+    <p>Phone: +91 98765 43210</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Lamp_icon.png" alt="Lamp Icon" width="120">
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 City Light Department | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
