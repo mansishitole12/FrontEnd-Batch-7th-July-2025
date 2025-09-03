@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo 7 - Unique Shapes (Upgraded)</title>
+  <style>
+    /* ===== General Page Styling ===== */
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px; /* Better spacing between shapes */
+      padding: 30px;
+      background: linear-gradient(135deg, #fffaf0, #fceabb);
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== Base Shape Styling ===== */
+    .shape {
+      width: 120px;
+      height: 120px;
+      margin: 12px;
+      padding: 10px;
+      background: #9b59b6;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover effect */
+    .shape:hover {
+      transform: scale(1.1);
+      box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ===== Shapes 201-250 Styling ===== */
+
+    /* Rounded abstract blob styles */
+    .shape201 {border-radius: 20% 40% 60% 80%; background:#e74c3c;}
+    .shape202 {border-radius: 80% 60% 40% 20%; background:#3498db;}
+    .shape203 {border-radius: 100% 0 100% 0; background:#2ecc71;}
+    .shape204 {border-radius: 0 100% 0 100%; background:#f39c12;}
+
+    /* Box shadows for depth */
+    .shape205 {box-shadow: 12px 12px 30px #2c3e50; background:#1abc9c;}
+    .shape206 {box-shadow: -12px -12px 30px #16a085; background:#9b59b6;}
+
+    /* Border styles */
+    .shape207 {border:10px groove #c0392b; background:#ecf0f1;}
+    .shape208 {border:10px ridge #2980b9; background:#f1c40f;}
+    .shape209 {border:10px dotted #d35400; background:#95a5a6;}
+    .shape210 {border:10px dashed #8e44ad; background:#e67e22;}
+
+    /* Transform shapes */
+    .shape211 {transform:rotate(45deg); background:#16a085;}
+    .shape212 {transform:rotate(-45deg); background:#c0392b;}
+    .shape213 {transform:skew(15deg, 25deg); background:#8e44ad;}
+    .shape214 {transform:skew(-15deg, -25deg); background:#27ae60;}
+
+    /* Glow effects */
+    .shape215 {box-shadow: inset 0 0 25px #27ae60; background:#fff;}
+    .shape216 {box-shadow: 0 0 40px #f39c12; background:#fceabb;}
+    .shape217 {box-shadow: inset 5px 5px 25px #34495e; background:#ecf0f1;}
+
+    /* Fancy borders */
+    .shape222 {border:6px double #1abc9c; background:#eafaf1;}
+    .shape223 {border:6px groove #7f8c8d; background:#fdfefe;}
+    .shape224 {border:6px ridge #bdc3c7; background:#fff;}
+    .shape225 {border:6px inset #e67e22; background:#faf0e6;}
+    .shape226 {border:6px outset #9b59b6; background:#fbeaff;}
+
+    /* Text shadow effects */
+    .shape227 {
+      background:#34495e;
+      text-shadow: 4px 4px 6px #2c3e50;
+    }
+    .shape228 {
+      background:#e67e22;
+      text-shadow: -4px -4px 6px #f39c12;
+    }
+
+    /* Shadow block styles */
+    .shape229 {box-shadow:15px 15px 0 #16a085; background:#f1c40f;}
+    .shape230 {box-shadow:-15px -15px 0 #c0392b; background:#2ecc71;}
+
+    /* Decorative corner styles */
+    .shape231 {border-top:15px solid #8e44ad; border-right:15px solid transparent; background:#f9ebea;}
+    .shape232 {border-left:15px solid #27ae60; border-bottom:15px solid transparent; background:#fdf2e9;}
+    .shape233 {border-bottom:15px solid #3498db; border-left:15px solid transparent; background:#ebf5fb;}
+    .shape234 {border-right:15px solid #f1c40f; border-top:15px solid transparent; background:#fef9e7;}
+
+    /* Circular & fancy borders */
+    .shape241 {border:12px solid #34495e; border-radius:50%; background:#ecf0f1;}
+    .shape242 {border:12px solid #f39c12; border-radius:25%; background:#fef5e7;}
+    .shape243 {border:12px dashed #2980b9; border-radius:30%; background:#ebf5fb;}
+    .shape244 {border:12px dotted #c0392b; border-radius:40%; background:#fdecea;}
+    .shape245 {border:12px double #8e44ad; border-radius:60%; background:#f5eef8;}
+
+    /* Glow + inset */
+    .shape248 {box-shadow:0 0 40px #9b59b6; background:#fff;}
+    .shape249 {box-shadow:inset 0 0 40px #1abc9c; background:#fff;}
+
+    /* Final shape */
+    .shape250 {border:8px inset #d35400; border-radius:70%; background:#fdf2e9;}
+  </style>
+</head>
+<body>
+  <!-- Shapes 201-250 -->
+  <div class="shape shape201"></div>
+  <div class="shape shape202"></div>
+  <div class="shape shape203"></div>
+  <div class="shape shape204"></div>
+  <div class="shape shape205"></div>
+  <div class="shape shape206"></div>
+  <div class="shape shape207"></div>
+  <div class="shape shape208"></div>
+  <div class="shape shape209"></div>
+  <div class="shape shape210"></div>
+  <div class="shape shape211"></div>
+  <div class="shape shape212"></div>
+  <div class="shape shape213"></div>
+  <div class="shape shape214"></div>
+  <div class="shape shape215"></div>
+  <div class="shape shape216"></div>
+  <div class="shape shape217"></div>
+  <div class="shape shape218"></div>
+  <div class="shape shape219"></div>
+  <div class="shape shape220"></div>
+  <div class="shape shape221"></div>
+  <div class="shape shape222"></div>
+  <div class="shape shape223"></div>
+  <div class="shape shape224"></div>
+  <div class="shape shape225"></div>
+  <div class="shape shape226"></div>
+  <div class="shape shape227">E</div>
+  <div class="shape shape228">F</div>
+  <div class="shape shape229"></div>
+  <div class="shape shape230"></div>
+  <div class="shape shape231"></div>
+  <div class="shape shape232"></div>
+  <div class="shape shape233"></div>
+  <div class="shape shape234"></div>
+  <div class="shape shape235"></div>
+  <div class="shape shape236"></div>
+  <div class="shape shape237"></div>
+  <div class="shape shape238"></div>
+  <div class="shape shape239"></div>
+  <div class="shape shape240"></div>
+  <div class="shape shape241"></div>
+  <div class="shape shape242"></div>
+  <div class="shape shape243"></div>
+  <div class="shape shape244"></div>
+  <div class="shape shape245"></div>
+  <div class="shape shape246"></div>
+  <div class="shape shape247"></div>
+  <div class="shape shape248"></div>
+  <div class="shape shape249"></div>
+  <div class="shape shape250"></div>
+</body>
+</html>

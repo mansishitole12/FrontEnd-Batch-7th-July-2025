@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo 3 — 50 Unique Shapes (HTML + CSS)</title>
+  <style>
+    /* ========================
+       Demo 3: 50 Unique Shapes
+       - All shapes built using only DIVs and CSS
+       - Concepts used: box-shadow, text-shadow, border, padding,
+         margin, border-radius, transforms, multiple shadows, inset shadows
+       - Internal CSS with comments for each shape
+       - Real-world use-cases noted in comments
+       ======================== */
+
+    /* Page / grid layout ------------------------------------------------- */
+    :root {
+      --size: 110px;        /* default square size */
+      --small: 60px;
+      --gap: 18px;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --muted: #555;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      min-height:100%;
+      background:var(--bg);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--muted);
+      padding:28px;
+    }
+
+    .header{
+      margin-bottom:14px;
+    }
+    .header h1{margin:0 0 6px 0;font-size:18px}
+    .header p{margin:0;font-size:13px;color:#666}
+
+    .grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--gap);
+      align-items:flex-start;
+    }
+
+    /* Base shape box ---------------------------------------------------- */
+    .shape{
+      width:var(--size);
+      height:var(--size);
+      background:var(--card);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      border-radius:8px;
+      box-sizing:border-box;
+      padding:8px;
+      text-align:center;
+      font-size:12px;
+      color:#222;
+    }
+
+    /* label inside shape (kept as DIV as requested) */
+    .shape .label{
+      pointer-events:none;
+      user-select:none;
+      line-height:1.05;
+    }
+
+    /* Make some shapes smaller/larger as needed */
+    .shape.small{width:var(--small);height:var(--small);font-size:11px}
+    .shape.wide{width:220px;height:80px}
+    .shape.tall{width:80px;height:220px}
+
+    /* ------------------------
+       Individual shapes s1..s50
+       Each block below contains a short comment that explains:
+        - what the CSS does
+        - a typical real-world use-case
+       ------------------------ */
+
+    /* Shape 1: Simple square (basic card) */
+    .s1{background:#e8f5e9;border-radius:6px}
+
+    /* Shape 2: Perfect circle (avatar placeholder) */
+    .s2{background:#ffecb3;border-radius:50%;}
+
+    /* Shape 3: Pill button (rounded action button) */
+    .s3{background:#bbdefb;border-radius:999px;padding:12px 18px;width:auto}
+
+    /* Shape 4: Rounded card with soft shadow (information card) */
+    .s4{background:#fff;border-radius:16px;box-shadow:0 6px 16px rgba(30,30,30,0.08)}
+
+    /* Shape 5: Elevated card (call-to-action) */
+    .s5{background:#fff;border-radius:10px;box-shadow:0 12px 30px rgba(10,10,30,0.12)}
+
+    /* Shape 6: Inset / concave (pressed UI element) */
+    .s6{background:#e9eef5;border-radius:12px;box-shadow:inset 6px 6px 14px rgba(0,0,0,0.06), inset -6px -6px 14px rgba(255,255,255,0.8)}
+
+    /* Shape 7: Soft glow (notification highlight) */
+    .s7{background:#fff;border-radius:50%;box-shadow:0 0 18px rgba(33,150,243,0.18)}
+
+    /* Shape 8: Text with heavy text-shadow (logo / headline style) */
+    .s8{background:#fff;border-radius:8px}
+    .s8 .label{font-weight:700;text-shadow:2px 2px 0 rgba(0,0,0,0.06)}
+
+    /* Shape 9: Double border using box-shadow (fancy outline) */
+    .s9{background:#fff;border-radius:12px;border:2px solid #ffcc80;box-shadow:0 0 0 4px rgba(255,204,128,0.12)}
+
+    /* Shape 10: Dashed badge (tag / coupon) */
+    .s10{background:#fff;border-radius:14px;border:2px dashed #9e9e9e}
+
+    /* Shape 11: Thick bordered circle (status indicator) */
+    .s11{background:#ffe0b2;border-radius:50%;border:6px solid #ff7043}
+
+    /* Shape 12: Avatar with ring (profile image placeholder) */
+    .s12{background:#fff;border-radius:50%;box-shadow:0 0 0 6px rgba(3,169,244,0.14)}
+
+    /* Shape 13: Small dot status (online dot) */
+    .s13{width:18px;height:18px;border-radius:50%;background:#4caf50}
+
+    /* Shape 14: Ringed status (offline/idle ring) */
+    .s14{width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #ffb300;box-shadow:0 0 0 4px rgba(255,179,0,0.14)}
+
+    /* Shape 15: Outline pill (ghost button) */
+    .s15{background:transparent;border-radius:999px;border:2px solid #90a4ae;padding:8px 16px;width:auto}
+
+    /* Shape 16: Rotated label (tag/brand ribbon) */
+    .s16{background:#ffebee;border-radius:6px;transform:rotate(-12deg)}
+
+    /* Shape 17: Ribbon (badge corner) - uses nested inner rectangle */
+    .s17{background:linear-gradient(135deg,#fce4ec,#f8bbd0);border-radius:6px;position:relative}
+    .s17 .label{transform:translateY(6px)}
+
+    /* Shape 18: Notched tag (coupon cutout) - simulate with border and padding */
+    .s18{background:#fff3e0;border-radius:8px;border:2px solid #ffcc80;padding:14px}
+
+    /* Shape 19: Diamond (used as marker) - rotate the square */
+    .s19{width:90px;height:90px;background:#e1bee7;border-radius:6px;transform:rotate(45deg)}
+    .s19 .label{transform:rotate(-45deg)} /* rotate label back to readable */
+
+    /* Shape 20: Speech bubble (message UI) - using nested small tail box */
+    .s20{background:#e8f5ff;border-radius:14px;padding:14px;position:relative;width:160px;height:auto}
+    .s20 .label{font-size:13px}
+    .s20 .tail{width:16px;height:16px;background:#e8f5ff;position:absolute;left:18px;bottom:-8px;transform:rotate(45deg)}
+
+    /* Shape 21: Callout (info box with colored left border) */
+    .s21{background:#fff;border-left:6px solid #81d4fa;border-radius:8px;padding:10px}
+
+    /* Shape 22: Soft halo circle (focus highlight) */
+    .s22{background:#fff;border-radius:50%;box-shadow:0 12px 26px rgba(2,136,209,0.12)}
+
+    /* Shape 23: Concave pill (inset inner shadow for pressed effect) */
+    .s23{background:#f0f4f8;border-radius:999px;box-shadow:inset 4px 4px 10px rgba(0,0,0,0.06)}
+
+    /* Shape 24: Multi-layer shadow (depth stacking) */
+    .s24{background:#fff;border-radius:10px;box-shadow:0 6px 10px rgba(0,0,0,0.08), 0 18px 36px rgba(0,0,0,0.06)}
+
+    /* Shape 25: 3D raised button (floating action) */
+    .s25{background:#ff8a65;border-radius:50%;width:90px;height:90px;box-shadow:0 18px 40px rgba(255,138,101,0.2)}
+
+    /* Shape 26: Pressed button (inset shadow) */
+    .s26{background:#b2dfdb;border-radius:12px;box-shadow:inset 4px 4px 10px rgba(0,0,0,0.08)}
+
+    /* Shape 27: Toggle knob (circle with inner glint) */
+    .s27{background:#fff;border-radius:999px;border:2px solid #cfd8dc;padding:6px;width:60px}
+    .s27 .knob{width:28px;height:28px;border-radius:50%;background:#90caf9;box-shadow:inset -4px -4px 8px rgba(255,255,255,0.6)}
+
+    /* Shape 28: Check badge (success icon using text char) */
+    .s28{background:#e8f5e9;border-radius:50%;font-weight:700}
+    .s28 .label{font-size:20px;color:#2e7d32}
+
+    /* Shape 29: Cross badge (error icon) */
+    .s29{background:#ffebee;border-radius:50%}
+    .s29 .label{font-size:20px;color:#c62828}
+
+    /* Shape 30: Floating action (plus) */
+    .s30{background:#1976d2;border-radius:50%;color:#fff;font-weight:700;box-shadow:0 10px 28px rgba(25,118,210,0.25)}
+
+    /* Shape 31: Beveled square (flat UI with stroke) */
+    .s31{background:#fff;border-radius:6px;border-top:3px solid rgba(0,0,0,0.06);box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+
+    /* Shape 32: Triangle (pointer/marker) - uses borders */
+    .s32{width:0;height:0;border-left:38px solid transparent;border-right:38px solid transparent;border-bottom:70px solid #ffe082;background:transparent;padding:0}
+
+    /* Shape 33: Chevron (arrow) - made with borders too */
+    .s33{width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-top:18px solid #90a4ae;transform:rotate(180deg)}
+
+    /* Shape 34: Ghost button (very subtle, text shadow emphasis) */
+    .s34{background:transparent;border-radius:10px;border:1px solid rgba(0,0,0,0.06)}
+    .s34 .label{text-shadow:1px 1px 0 rgba(0,0,0,0.04)}
+
+    /* Shape 35: Stamp / seal (rotated dashed) */
+    .s35{background:#fff;border-radius:50%;border:3px dashed rgba(0,0,0,0.12);transform:rotate(-6deg)}
+
+    /* Shape 36: Dotted circle (status/processing) */
+    .s36{background:transparent;border-radius:50%;border:4px dotted #b0bec5}
+
+    /* Shape 37: Concentric circles (multi-ring avatar) */
+    .s37{background:#fff;border-radius:50%;box-shadow:0 0 0 6px rgba(156,39,176,0.08), 0 0 0 12px rgba(156,39,176,0.04)}
+
+    /* Shape 38: Icon + pill (search tag) */
+    .s38{background:#e3f2fd;border-radius:999px;padding:10px 14px;width:auto}
+    .s38 .icon{width:22px;height:22px;border-radius:50%;background:#bbdefb;margin-bottom:6px}
+
+    /* Shape 39: Slider knob (small circular with inner crescent glint) */
+    .s39{background:#fafafa;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.06)}
+    .s39 .glint{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.9);margin-top:-28px;margin-left:18px}
+
+    /* Shape 40: Glass-like card (semi-transparent with thin border) */
+    .s40{background:rgba(255,255,255,0.6);backdrop-filter:blur(4px);border-radius:14px;border:1px solid rgba(255,255,255,0.5);box-shadow:0 8px 18px rgba(24,24,24,0.06)}
+
+    /* Shape 41: Badge with notch (small triangular cut) */
+    .s41{background:#ffecb3;border-radius:10px;padding:10px 12px;border:1px solid #ffd54f}
+
+    /* Shape 42: Small card with soft border (menu item) */
+    .s42{background:#fff;border-radius:8px;border:1px solid #eceff1;padding:10px}
+
+    /* Shape 43: Folded corner (document icon) - uses extra inner small box */
+    .s43{background:#fff;border-radius:8px;position:relative;padding:12px;box-shadow:0 6px 14px rgba(0,0,0,0.05)}
+    .s43 .fold{width:24px;height:24px;background:#ffcc80;position:absolute;right:8px;top:8px;transform:skew(-20deg)}
+
+    /* Shape 44: Progress track with inner fill (progress bar) */
+    .s44{width:200px;height:28px;border-radius:999px;background:#eceff1;padding:4px}
+    .s44 .fill{height:100%;width:65%;border-radius:999px;background:#66bb6a}
+
+    /* Shape 45: Hamburger icon (menu lines) */
+    .s45{background:transparent;border-radius:6px;width:60px;height:40px;padding:12px}
+    .s45 .bar{height:4px;width:100%;border-radius:4px;background:#455a64;margin:6px 0}
+
+    /* Shape 46: Ellipsis (more menu) - three dots */
+    .s46{background:transparent}
+    .s46 .dot{width:10px;height:10px;border-radius:50%;background:#607d8b;margin:0 4px;display:inline-block}
+
+    /* Shape 47: Star glyph with shadow (rating icon using text) */
+    .s47{background:transparent}
+    .s47 .label{font-size:26px;color:#ffb300;text-shadow:2px 2px 6px rgba(0,0,0,0.08)}
+
+    /* Shape 48: Skewed tag (promo label) */
+    .s48{background:#f3e5f5;border-radius:6px;padding:8px 12px;transform:skewX(-12deg)}
+
+    /* Shape 49: Layered cards (stack effect) */
+    .s49{background:#fff;border-radius:10px;padding:12px;position:relative}
+    .s49::after{content:'';position:absolute;left:6px;top:10px;width:100%;height:100%;background:#fff;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,0.04);z-index:-1}
+
+    /* Shape 50: Asymmetric rounded blob (organic shape) */
+    .s50{background:#c5e1a5;border-radius:50% 20% 40% 60% / 30% 60% 20% 40%;width:120px;height:90px}
+
+    /* Responsive tweaks ------------------------------------------------- */
+    @media (max-width:900px){
+      .shape{width:95px;height:95px}
+      .s44{width:170px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Demo 3 — 50 Unique Shapes (HTML + CSS)</h1>
+    <p>All shapes use only DIVs and CSS properties (box-shadow, text-shadow, border, padding, margin, border-radius, transforms). Each shape has a short comment in the CSS explaining its use-case.</p>
+  </div>
+
+  <div class="grid">
+    <!-- For shapes that require extra elements inside (tails, fills, knobs), nested DIVs are used -->
+
+    <div class="shape s1"><div class="label">Square</div></div>
+    <div class="shape s2"><div class="label">Circle</div></div>
+    <div class="shape s3"><div class="label">Pill</div></div>
+    <div class="shape s4"><div class="label">Rounded Card</div></div>
+    <div class="shape s5"><div class="label">Elevated</div></div>
+    <div class="shape s6"><div class="label">Inset</div></div>
+    <div class="shape s7"><div class="label">Glow</div></div>
+    <div class="shape s8"><div class="label">Text Shadow</div></div>
+    <div class="shape s9"><div class="label">Double Border</div></div>
+    <div class="shape s10"><div class="label">Dashed Tag</div></div>
+
+    <div class="shape s11 small"><div class="label">Thick Border</div></div>
+    <div class="shape s12 small"><div class="label">Avatar Ring</div></div>
+    <div class="shape s13 small"><div class="label">Dot</div></div>
+    <div class="shape s14 small"><div class="label">Ring</div></div>
+    <div class="shape s15"><div class="label">Outline Pill</div></div>
+    <div class="shape s16"><div class="label">Rotated Tag</div></div>
+    <div class="shape s17"><div class="label">Ribbon</div></div>
+    <div class="shape s18"><div class="label">Notched Tag</div></div>
+    <div class="shape s19"><div class="label">Diamond</div></div>
+
+    <div class="shape s20" style="width:160px"><div class="label">"Hello" bubble</div><div class="tail"></div></div>
+    <div class="shape s21 wide"><div class="label">Callout</div></div>
+    <div class="shape s22"><div class="label">Halo</div></div>
+    <div class="shape s23"><div class="label">Concave</div></div>
+    <div class="shape s24"><div class="label">Multi Shadow</div></div>
+    <div class="shape s25"><div class="label">3D</div></div>
+    <div class="shape s26"><div class="label">Pressed</div></div>
+    <div class="shape s27"><div class="label">Toggle</div><div class="knob"></div></div>
+    <div class="shape s28"><div class="label">✓</div></div>
+
+    <div class="shape s29"><div class="label">✕</div></div>
+    <div class="shape s30"><div class="label">+</div></div>
+    <div class="shape s31"><div class="label">Beveled</div></div>
+
+    <!-- Triangle and chevron use zero-sized elements; wrappers keep layout consistent -->
+    <div class="shape" style="background:transparent;padding:0;height:84px;display:flex;align-items:center;justify-content:center">
+      <div class="s32"></div>
+      <div style="font-size:12px;margin-top:6px">Triangle</div>
+    </div>
+
+    <div class="shape" style="background:transparent;padding:8px;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div class="s33"></div>
+      <div style="font-size:12px;margin-top:6px">Chevron</div>
+    </div>
+
+    <div class="shape s34"><div class="label">Ghost</div></div>
+    <div class="shape s35 small"><div class="label">Stamp</div></div>
+    <div class="shape s36 small"><div class="label">Dotted</div></div>
+    <div class="shape s37"><div class="label">Rings</div></div>
+    <div class="shape s38"><div class="icon"></div><div class="label">Tag</div></div>
+    <div class="shape s39 small"><div class="glint"></div><div class="label">Knob</div></div>
+
+    <div class="shape s40"><div class="label">Glass</div></div>
+    <div class="shape s41"><div class="label">Notch</div></div>
+    <div class="shape s42"><div class="label">Menu</div></div>
+    <div class="shape s43"><div class="fold"></div><div class="label">Doc</div></div>
+
+    <div class="shape s44 wide"><div class="fill"></div></div>
+
+    <div class="shape s45"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+    <div class="shape s46"><div style="display:flex;align-items:center;justify-content:center"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+    <div class="shape s47"><div class="label">★</div></div>
+    <div class="shape s48"><div class="label">Promo</div></div>
+
+    <div class="shape s49"><div class="label">Stack</div></div>
+    <div class="shape s50"><div class="label">Blob</div></div>
+
+  </div>
+</body>
+</html>

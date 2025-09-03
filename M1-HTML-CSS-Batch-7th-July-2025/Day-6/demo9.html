@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo 9 — Shapes 301-350 (Upgraded)</title>
+  <style>
+    /* ===============================
+       DEMO 9: SHAPES 301 - 350 (Upgraded)
+       - Built using DIVs + CSS
+       - Includes text-shadow, box-shadow, spacing, and vibrant colors
+       =============================== */
+
+    :root {
+      --size: 110px;
+      --gap: 20px;
+      --bg: #f9f9fb;
+    }
+
+    /* Reset and base styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: #222;
+    }
+
+    h2 {
+      margin: 20px 0 16px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap);
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Base shape */
+    .shape {
+      width: var(--size);
+      height: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .shape:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    /* Smaller variation */
+    .small {
+      width: 72px;
+      height: 72px;
+    }
+
+    /* Labels inside shapes */
+    .label {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      color: #333;
+      text-shadow: 1px 1px rgba(0,0,0,0.05);
+    }
+
+    /* ===============================
+       SHAPE VARIANTS
+       =============================== */
+
+    /* --- Cards & Containers --- */
+    .s301 {border:1px solid #d1c4e9;background:#ede7f6}
+    .s302 {background:linear-gradient(180deg,#fff,#f3e5f5);border-radius:50%;box-shadow:0 8px 20px rgba(156,39,176,0.15)}
+    .s303 {border-radius:999px;padding:12px 18px;background:#fff;border:2px solid #9e9e9e}
+    .s304 {box-shadow:inset 6px 6px 14px rgba(0,0,0,0.08);background:#fafafa}
+    .s305 {background:#fff;border-radius:10px;border-top:6px solid #ec407a}
+    .s306 {background:#fff3e0;border-radius:16px;box-shadow:0 12px 30px rgba(255,152,0,0.2)}
+    .s307 {background:#fff;border-radius:50%;box-shadow:0 0 0 8px rgba(33,150,243,0.2)}
+    .s308 {background:#fff;border-left:6px solid #8e24aa}
+    .s309 {background:#fff;border:2px dashed #616161}
+    .s310 {width:160px;height:60px;border-radius:999px;background:linear-gradient(90deg,#f1f8e9,#c5e1a5)}
+
+    /* --- Badges & Icons --- */
+    .s311 {width:48px;height:48px;border-radius:50%;background:#ffebee;box-shadow:0 8px 20px rgba(244,67,54,0.3)}
+    .s312 {background:#fff176;border-radius:50%;border:3px solid #fbc02d}
+    .s313 {background:#e3f2fd;border-radius:8px;border:2px solid #2196f3}
+    .s314 {background:#fff;border-radius:50%;border:4px solid #eeeeee}
+    .s315 {background:#e0f7fa;border-left:8px solid #00bcd4}
+    .s316 {background:#e8eaf6;border-top:6px solid #3f51b5}
+    .s317 {background:#fff;border-radius:50%;width:84px;height:84px;border:6px solid rgba(233,30,99,0.2)}
+    .s318 {background:#fafafa;border:1px solid #cfd8dc}
+    .s319 {box-shadow:0 16px 40px rgba(0,0,0,0.2);background:#fff}
+    .s320 {background:linear-gradient(90deg,#c8e6c9,#a5d6a7)}
+
+    /* --- Text Emphasis --- */
+    .s321 {color:#fff;background:#7b1fa2;border-radius:10px;text-shadow:2px 2px 6px rgba(0,0,0,0.4)}
+    .s322 {color:#fff;background:#0288d1;border-radius:50%;font-weight:700;text-shadow:1px 1px 2px rgba(0,0,0,0.3)}
+    .s323 {color:#fff;background:#d81b60;border-radius:6px;text-shadow:3px 3px rgba(0,0,0,0.4)}
+    .s324 {background:#fff;border-radius:10px;border:2px solid #ce93d8;color:#6a1b9a}
+    .s325 {background:#fff;border-radius:50%;box-shadow:0 10px 30px rgba(0,0,0,0.2);color:#2e7d32}
+    .s326 {background:#fff;border-radius:8px;border-right:6px solid #ff7043}
+    .s327 {background:#fff;border-radius:12px;border-bottom:6px solid #29b6f6}
+    .s328 {background:#fff;border-radius:12px;border-top:6px solid #66bb6a}
+    .s329 {background:#fff;border-radius:8px;border-left:6px solid #ffca28}
+    .s330 {background:#fff;border-radius:12px;border:3px dotted #7986cb}
+
+    /* --- Decorative --- */
+    .s331 {border:6px double #7e57c2}
+    .s332 {border:6px groove #03a9f4}
+    .s333 {box-shadow:0 0 30px rgba(255,152,0,0.6)}
+    .s334 {box-shadow:inset 8px 8px 18px rgba(0,0,0,0.2)}
+    .s335 {border-radius:999px;background:#f5f5f5;border:2px solid #9e9e9e}
+    .s336 {width:140px;height:80px;border-radius:18px;background:#fff3e0;box-shadow:0 12px 30px rgba(255,152,0,0.3)}
+    .s337 {border-radius:50%/30%;width:110px;height:80px;background:#c5cae9}
+    .s338 {border-radius:30%/50%;width:110px;height:80px;background:#ffe082}
+    .s339 {background:#ffccbc;border-radius:20% 50% 80% 40%;width:120px;height:80px}
+    .s340 {background:#c8e6c9;border-radius:80% 40% 20% 60%;width:120px;height:80px}
+
+    /* --- Organic & Utility --- */
+    .s341 {background:linear-gradient(135deg,#fff3e0,#ffe0b2);border-radius:12px;box-shadow:inset 0 4px 8px rgba(0,0,0,0.1)}
+    .s342 {background:#f8bbd0;border-radius:40% 60% 20% 80%/50% 30% 70% 40%;width:130px;height:80px}
+    .s343 {background:#bbdefb;border-radius:20% 80% 50% 50%/60% 40% 60% 40%;width:130px;height:80px}
+    .s344 {background:#dcedc8;border-radius:60% 30% 70% 40%/40% 60% 30% 60%;width:130px;height:80px}
+    .s345 {background:#fff;border-radius:999px;padding:10px 22px;border:1px solid #9e9e9e}
+    .s346 {background:#f3e5f5;border-radius:14px;border:2px solid #ab47bc;box-shadow:0 8px 18px rgba(171,71,188,0.2)}
+    .s347 {background:#fff;border-radius:10px;border-left:8px solid #29b6f6}
+    .s348 {background:#fff;border-radius:10px;border-right:8px solid #ff8a65}
+    .s349 {width:140px;height:60px;border-radius:999px;background:linear-gradient(90deg,#bbdefb,#64b5f6);box-shadow:0 12px 32px rgba(33,150,243,0.25)}
+    .s350 {background:linear-gradient(90deg,#c8e6c9,#81c784);border-radius:12px;border:1px solid #a5d6a7}
+
+    /* Responsive */
+    @media (max-width:920px) {
+      :root {--size: 86px}
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <!-- Group 1 -->
+    <div class="shape s301"><div class="label">Card</div></div>
+    <div class="shape s302 small"><div class="label">Gradient</div></div>
+    <div class="shape s303"><div class="label">Pill</div></div>
+    <div class="shape s304"><div class="label">Inset</div></div>
+    <div class="shape s305"><div class="label">Top Accent</div></div>
+    <div class="shape s306"><div class="label">Prominent</div></div>
+    <div class="shape s307 small"><div class="label">Ring</div></div>
+    <div class="shape s308"><div class="label">Left Bar</div></div>
+    <div class="shape s309"><div class="label">Dashed</div></div>
+    <div class="shape s310"><div class="label">Wide Pill</div></div>
+
+    <!-- Group 2 -->
+    <div class="shape s311 small"><div class="label">Icon</div></div>
+    <div class="shape s312 small"><div class="label">Badge</div></div>
+    <div class="shape s313 small"><div class="label">Frame</div></div>
+    <div class="shape s314 small"><div class="label">Ring</div></div>
+    <div class="shape s315"><div class="label">Callout</div></div>
+    <div class="shape s316"><div class="label">Header</div></div>
+    <div class="shape s317 small"><div class="label">Framed</div></div>
+    <div class="shape s318"><div class="label">Tile</div></div>
+    <div class="shape s319"><div class="label">Shadow</div></div>
+    <div class="shape s320"><div class="label">Gradient</div></div>
+
+    <!-- Group 3 -->
+    <div class="shape s321"><div class="label">Text</div></div>
+    <div class="shape s322 small"><div class="label">Glyph</div></div>
+    <div class="shape s323"><div class="label">Alert</div></div>
+    <div class="shape s324"><div class="label">Outline</div></div>
+    <div class="shape s325 small"><div class="label">Float</div></div>
+    <div class="shape s326"><div class="label">Right Bar</div></div>
+    <div class="shape s327"><div class="label">Bottom Bar</div></div>
+    <div class="shape s328"><div class="label">Top Bar</div></div>
+    <div class="shape s329"><div class="label">Left Bar</div></div>
+    <div class="shape s330"><div class="label">Dotted</div></div>
+
+    <!-- Group 4 -->
+    <div class="shape s331"><div class="label">Double</div></div>
+    <div class="shape s332"><div class="label">Groove</div></div>
+    <div class="shape s333"><div class="label">Glow</div></div>
+    <div class="shape s334"><div class="label">Inset Glow</div></div>
+    <div class="shape s335"><div class="label">Pill</div></div>
+    <div class="shape s336"><div class="label">Wide Card</div></div>
+    <div class="shape s337"><div class="label">Oval A</div></div>
+    <div class="shape s338"><div class="label">Oval B</div></div>
+    <div class="shape s339"><div class="label">Organic</div></div>
+    <div class="shape s340"><div class="label">Organic</div></div>
+
+    <!-- Group 5 -->
+    <div class="shape s341"><div class="label">Warm</div></div>
+    <div class="shape s342"><div class="label">Asym A</div></div>
+    <div class="shape s343"><div class="label">Asym B</div></div>
+    <div class="shape s344"><div class="label">Asym C</div></div>
+    <div class="shape s345"><div class="label">Large Pill</div></div>
+    <div class="shape s346"><div class="label">Frame</div></div>
+    <div class="shape s347"><div class="label">Left Accent</div></div>
+    <div class="shape s348"><div class="label">Right Accent</div></div>
+    <div class="shape s349"><div class="label">Header Pill</div></div>
+    <div class="shape s350"><div class="label">Cool</div></div>
+  </div>
+</body>
+</html>

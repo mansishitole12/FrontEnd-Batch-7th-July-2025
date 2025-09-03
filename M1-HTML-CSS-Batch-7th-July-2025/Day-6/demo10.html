@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo 10 — Shapes 351-400 (HTML + CSS)</title>
+  <style>
+    /* ===============================
+       Demo10: Final set — Shapes 351-400
+       -------------------------------
+       - All shapes built using only DIVs + CSS
+       - Used concepts: border, border-radius, box-shadow, text-shadow, padding, margin
+       - Internal CSS with comments; useful for real-world UI elements
+       =============================== */
+
+    :root{
+      --sz:110px; /* base shape size */
+      --gap:16px; /* grid gap */
+      --bg:#f7fff9; /* page background */
+    }
+
+    html,body{height:100%}
+    body{
+      margin:20px;
+      background:var(--bg);
+      font-family:Inter,Arial,sans-serif;
+      color:#222;
+    }
+
+    /* Grid layout for shapes */
+    .grid{display:flex;flex-wrap:wrap;gap:var(--gap)}
+
+    /* Base shape style */
+    .shape{
+      width:var(--sz);
+      height:var(--sz);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      border-radius:10px;
+      padding:8px;
+      box-sizing:border-box;
+      margin:4px; /* margin for spacing */
+    }
+
+    /* Small variant */
+    .small{width:72px;height:72px}
+
+    /* Label inside each shape */
+    .label{
+      font-size:12px;
+      text-align:center;
+      text-shadow:1px 1px rgba(0,0,0,0.06); /* subtle text-shadow */
+    }
+
+    /* ----------------------
+       Shapes 351 - 360: subtle gradients & strokes
+       ---------------------- */
+    .s351{background:linear-gradient(135deg,#fff,#e8f5e9);border-radius:12px;box-shadow:0 8px 20px rgba(2,136,209,0.06)} /* fresh card */
+    .s352{background:linear-gradient(90deg,#fff,#e3f2fd);border-radius:50%;box-shadow:0 10px 28px rgba(3,169,244,0.06)} /* blue avatar */
+    .s353{border:2px solid #f1f8e9;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.04)} /* soft border */
+    .s354{border-radius:999px;padding:12px 20px;background:#fff;border:1px solid rgba(0,0,0,0.04);box-shadow:0 6px 14px rgba(0,0,0,0.05)} /* rounded CTA */
+    .s355{box-shadow:inset 6px 6px 14px rgba(0,0,0,0.03);border-radius:10px} /* pressed */
+    .s356{border-left:8px solid #66bb6a;padding-left:10px;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.05)} /* success strip */
+    .s357{border-right:8px solid #42a5f5;padding-right:10px;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.05)} /* info strip */
+    .s358{border-top:8px solid #ffb74d;padding-top:8px;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.05)} /* accent top */
+    .s359{border-bottom:8px solid #ff8a65;padding-bottom:8px;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.05)} /* accent bottom */
+    .s360{width:160px;height:60px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,0.04);box-shadow:0 10px 28px rgba(0,0,0,0.05)} /* large pill */
+
+    /* ----------------------
+       Shapes 361 - 370: rings, frames, and stamps
+       ---------------------- */
+    .s361{border-radius:50%;width:90px;height:90px;box-shadow:0 0 0 8px rgba(255,193,7,0.08)} /* amber ring */
+    .s362{border-radius:50%;width:90px;height:90px;border:6px dashed rgba(33,150,243,0.12)} /* dashed ring */
+    .s363{border-radius:50%;width:80px;height:80px;border:6px double rgba(156,39,176,0.12)} /* double ring */
+    .s364{border-radius:12px;padding:10px;border:4px groove rgba(0,0,0,0.04)} /* grooved tile */
+    .s365{border-radius:12px;padding:10px;border:4px ridge rgba(0,0,0,0.04)} /* ridged tile */
+    .s366{border-radius:50%;width:72px;height:72px;border:4px solid #ff8a65;box-shadow:0 8px 20px rgba(255,138,101,0.06)} /* framed avatar */
+    .s367{border-radius:12px;padding:8px;border:2px solid #f3e5f5;transform:rotate(-6deg)} /* tilted promo */
+    .s368{border-radius:12px;padding:8px;border:2px dashed rgba(0,0,0,0.06)} /* dashed tile */
+    .s369{border-radius:10px;border-left:10px solid #8e24aa;padding-left:10px} /* purple accent */
+    .s370{border-radius:10px;border-right:10px solid #43a047;padding-right:10px} /* green accent */
+
+    /* ----------------------
+       Shapes 371 - 380: shadows & depth experiments
+       ---------------------- */
+    .s371{box-shadow:0 20px 40px rgba(0,0,0,0.08);border-radius:12px} /* deep card */
+    .s372{box-shadow:inset 8px 8px 20px rgba(0,0,0,0.04);border-radius:12px} /* deep inset */
+    .s373{box-shadow:0 6px 12px rgba(0,0,0,0.06), 0 18px 36px rgba(0,0,0,0.04);border-radius:14px} /* multi-shadow */
+    .s374{box-shadow:0 0 24px rgba(33,150,243,0.12);border-radius:12px} /* blue glow */
+    .s375{box-shadow:0 0 24px rgba(156,39,176,0.12);border-radius:12px} /* purple glow */
+    .s376{box-shadow:inset 0 -12px 24px rgba(0,0,0,0.06);border-radius:12px} /* bottom inset */
+    .s377{box-shadow:inset 0 12px 24px rgba(0,0,0,0.04);border-radius:12px} /* top inset */
+    .s378{box-shadow:-18px 10px 0 rgba(0,0,0,0.04);border-radius:12px} /* offset shadow */
+    .s379{box-shadow:18px -10px 0 rgba(0,0,0,0.04);border-radius:12px} /* reverse offset */
+    .s380{box-shadow:0 0 0 6px rgba(0,0,0,0.02), 0 18px 40px rgba(0,0,0,0.06);border-radius:16px} /* ring+depth */
+
+    /* ----------------------
+       Shapes 381 - 390: text-shadow & glyph treatments
+       ---------------------- */
+    .s381{color:#fff;background:#00695c;border-radius:12px;text-shadow:2px 2px 6px rgba(0,0,0,0.12)} /* dark pill */
+    .s382{color:#fff;background:#ad1457;border-radius:50%;font-weight:700;text-shadow:3px 3px rgba(0,0,0,0.12)} /* badge glyph */
+    .s383{color:#fff;background:#2e7d32;border-radius:10px;text-shadow:1px 1px rgba(0,0,0,0.08)} /* subtle glyph */
+    .s384{color:#fff;background:#0277bd;border-radius:12px;text-shadow:4px 4px rgba(0,0,0,0.14)} /* heavy shadow */
+    .s385{background:#fff;border-radius:50%;width:88px;height:88px;border:3px solid rgba(0,0,0,0.03);display:flex;align-items:center;justify-content:center} /* framed icon */
+    .s386{background:#fff;border-radius:8px;padding:8px;border:2px solid #f0f4c3;box-shadow:inset 4px 4px 8px rgba(0,0,0,0.02)} /* warm inset */
+    .s387{background:#fff;border-radius:12px;padding:10px;border:2px solid #e1bee7;transform:rotate(4deg)} /* small tilt */
+    .s388{background:#fff;border-radius:50%;width:66px;height:90px;border-radius:50% / 40%;box-shadow:0 10px 24px rgba(0,0,0,0.05)} /* vertical oval */
+    .s389{background:#fff;border-radius:12px;padding:8px;border:1px solid #e8f5e9;box-shadow:0 8px 18px rgba(76,175,80,0.04)} /* green tint */
+    .s390{background:#fff;border-radius:12px;padding:8px;border:1px solid #e3f2fd;box-shadow:0 8px 18px rgba(3,169,244,0.04)} /* blue tint */
+
+    /* ----------------------
+       Shapes 391 - 400: organic, asymmetric, final flourishes
+       ---------------------- */
+    .s391{background:linear-gradient(135deg,#fff,#fce4ec);border-radius:12px;padding:10px;box-shadow:inset 0 4px 8px rgba(0,0,0,0.03)} /* pink warm */
+    .s392{background:#fff;border-radius:60% 40% 30% 70% / 40% 60% 30% 70%;width:130px;height:80px;box-shadow:0 8px 16px rgba(0,0,0,0.05)} /* organic A */
+    .s393{background:#fff;border-radius:40% 60% 70% 30% / 50% 30% 70% 40%;width:130px;height:80px;box-shadow:0 8px 16px rgba(0,0,0,0.05)} /* organic B */
+    .s394{background:#fff;border-radius:30% 70% 30% 70% / 60% 40% 60% 40%;width:130px;height:80px;box-shadow:0 8px 16px rgba(0,0,0,0.05)} /* organic C */
+    .s395{background:#fff;border-radius:999px;padding:12px 26px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 6px 14px rgba(0,0,0,0.05)} /* pill CTA */
+    .s396{background:linear-gradient(90deg,#fff,#fffde7);border-radius:14px;padding:10px;border:1px solid rgba(0,0,0,0.03);box-shadow:0 6px 14px rgba(0,0,0,0.05)} /* subtle yellow */
+    .s397{background:#fff;border-radius:20% 60% 80% 40%/40% 80% 30% 60%;width:130px;height:80px;box-shadow:0 10px 20px rgba(0,0,0,0.05)} /* asymmetric blob */
+    .s398{background:#fff;border-radius:80% 20% 40% 60%/20% 60% 40% 80%;width:130px;height:80px;box-shadow:0 10px 20px rgba(0,0,0,0.05)} /* asymmetric blob 2 */
+    .s399{width:140px;height:60px;border-radius:999px;background:linear-gradient(90deg,#e8f5e9,#c8e6c9);box-shadow:0 12px 32px rgba(76,175,80,0.06)} /* large header pill */
+    .s400{background:linear-gradient(90deg,#e3f2fd,#bbdefb);border-radius:12px;padding:10px;border:1px solid rgba(0,0,0,0.03);box-shadow:0 8px 20px rgba(3,169,244,0.04)} /* final cool */
+
+    /* Responsive adjustment */
+    @media (max-width:920px){:root{--sz:86px}}
+
+  </style>
+</head>
+<body>
+  <h2 style="margin:0 0 12px 0;font-family:Inter,Arial,sans-serif">Demo 10 — Shapes 351-400 (Final)</h2>
+  <div class="grid">
+    <!-- Shapes with labels for better understanding -->
+  
+    <div class="shape s351"><div class="label">Fresh</div></div>
+    <div class="shape s352 small"><div class="label">Avatar</div></div>
+    <div class="shape s353"><div class="label">Soft</div></div>
+    <div class="shape s354"><div class="label">CTA</div></div>
+    <div class="shape s355"><div class="label">Pressed</div></div>
+    <div class="shape s356"><div class="label">Left strip</div></div>
+    <div class="shape s357"><div class="label">Right strip</div></div>
+    <div class="shape s358"><div class="label">Top strip</div></div>
+    <div class="shape s359"><div class="label">Bottom strip</div></div>
+    <div class="shape s360"><div class="label">Large Pill</div></div>
+
+    <div class="shape s361 small"><div class="label">Ring</div></div>
+    <div class="shape s362 small"><div class="label">Dashed</div></div>
+    <div class="shape s363 small"><div class="label">Double</div></div>
+    <div class="shape s364"><div class="label">Groove</div></div>
+    <div class="shape s365"><div class="label">Ridge</div></div>
+    <div class="shape s366 small"><div class="label">Framed</div></div>
+    <div class="shape s367"><div class="label">Tilt</div></div>
+    <div class="shape s368"><div class="label">Dashed</div></div>
+    <div class="shape s369"><div class="label">Purple</div></div>
+    <div class="shape s370"><div class="label">Green</div></div>
+
+    <div class="shape s371"><div class="label">Deep</div></div>
+    <div class="shape s372"><div class="label">Inset</div></div>
+    <div class="shape s373"><div class="label">Multi</div></div>
+    <div class="shape s374"><div class="label">Blue Glow</div></div>
+    <div class="shape s375"><div class="label">Purple Glow</div></div>
+    <div class="shape s376"><div class="label">Bottom Inset</div></div>
+    <div class="shape s377"><div class="label">Top Inset</div></div>
+    <div class="shape s378"><div class="label">Offset</div></div>
+    <div class="shape s379"><div class="label">Offset R</div></div>
+    <div class="shape s380"><div class="label">RingDepth</div></div>
+
+    <div class="shape s381"><div class="label">Dark</div></div>
+    <div class="shape s382 small"><div class="label">Badge</div></div>
+    <div class="shape s383"><div class="label">Glyph</div></div>
+    <div class="shape s384"><div class="label">Heavy</div></div>
+    <div class="shape s385 small"><div class="label">Framed</div></div>
+    <div class="shape s386"><div class="label">Warm</div></div>
+    <div class="shape s387"><div class="label">TiltSm</div></div>
+    <div class="shape s388 small"><div class="label">Oval</div></div>
+    <div class="shape s389"><div class="label">Green Tint</div></div>
+    <div class="shape s390"><div class="label">Blue Tint</div></div>
+
+    <div class="shape s391" style="width:130px;height:80px"><div class="label">Pink Warm</div></div>
+    <div class="shape s392" style="width:130px;height:80px"><div class="label">Organic A</div></div>
+    <div class="shape s393" style="width:130px;height:80px"><div class="label">Organic B</div></div>
+    <div class="shape s394" style="width:130px;height:80px"><div class="label">Organic C</div></div>
+    <div class="shape s395"><div class="label">CTA Pill</div></div>
+    <div class="shape s396"><div class="label">Soft Yellow</div></div>
+    <div class="shape s397" style="width:130px;height:80px"><div class="label">Asymm A</div></div>
+    <div class="shape s398" style="width:130px;height:80px"><div class="label">Asymm B</div></div>
+    <div class="shape s399" style="width:140px;height:60px"><div class="label">Header Pill</div></div>
+    <div class="shape s400"><div class="label">Final</div></div>
+
+  </div>
+</body>
+</html>
