@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo3 - Professional Navigation Menu</title>
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Gradient background */
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      background: #222; /* Dark header background */
+      padding: 15px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Adds depth */
+      position: sticky; /* Keeps navbar fixed at top */
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* ===== Unordered List for Navigation ===== */
+    nav ul {
+      list-style: none; /* Remove bullets */
+      margin: 0;
+      padding: 0;
+      display: flex; /* Horizontal menu */
+      justify-content: center;
+    }
+
+    /* ===== Each Navigation Item ===== */
+    nav li {
+      margin: 0 20px;
+      position: relative; /* Needed for pseudo-element underline */
+    }
+
+    /* ===== Navigation Links ===== */
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 15px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease; /* Smooth hover effects */
+    }
+
+    /* ===== Pseudo-Classes for Interactivity ===== */
+    nav a:hover {
+      color: #f76c6c;
+    }
+    nav a:active {
+      color: #ff3b3b;
+    }
+
+    /* ===== Pseudo-Element Underline Effect ===== */
+    nav li::after {
+      content: ""; /* Empty content for decoration */
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0; /* Initially hidden */
+      height: 3px;
+      background: #f76c6c;
+      transition: width 0.3s ease;
+    }
+    nav li:hover::after {
+      width: 100%; /* Expands underline on hover */
+    }
+
+    /* ===== Content Section ===== */
+    .content {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .content h1 {
+      color: #333;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .content p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== HTML List Example (Services Section) ===== */
+    .services {
+      margin: 40px auto;
+      text-align: left;
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .services h2 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+    .services ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+    .services li {
+      margin: 10px 0;
+      font-size: 15px;
+      color: #444;
+    }
+    .services li::before {
+      content: "✔ "; /* Checkmark before each service */
+      color: green;
+      font-weight: bold;
+    }
+
+    /* ===== MDN Reference Button ===== */
+    .mdn-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 18px;
+      background: #f76c6c;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .mdn-link:hover {
+      background: #ff3b3b;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Navigation Menu ===== -->
+  <nav>
+    <ul>
+      <li><a href="#">🏠 Home</a></li>
+      <li><a href="#">📑 About</a></li>
+      <li><a href="#">💼 Services</a></li>
+      <li><a href="#">📰 Blog</a></li>
+      <li><a href="#">📞 Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Content Section ===== -->
+  <div class="content">
+    <h1>Welcome to Shalini's Portfolio</h1>
+    <p>I am a Full Stack Developer & Corporate Trainer with expertise in Java, Python, MERN Stack, and Data Analytics. I help students and professionals upskill through interactive learning and real-world projects.</p>
+  </div>
+
+  <!-- ===== Services Section (HTML List + Pseudo Elements) ===== -->
+  <div class="services">
+    <h2>My Services</h2>
+    <ul>
+      <li>Web Development (Java, Python, MERN)</li>
+      <li>Corporate & Technical Training</li>
+      <li>Data Analytics & Visualization</li>
+      <li>Freelance Projects & Mentorship</li>
+    </ul>
+    <!-- ===== MDN Reference Button ===== -->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" class="mdn-link">
+      Learn More About Pseudo Classes (MDN)
+    </a>
+  </div>
+</body>
+</html>

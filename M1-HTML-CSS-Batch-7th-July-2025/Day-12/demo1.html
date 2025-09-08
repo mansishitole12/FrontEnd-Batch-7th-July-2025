@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS Session-12</title>
+    <style>
+        h1::after {
+            content: "🎮 " / "games";
+        }
+
+        h1::before {
+            content: "⛅ " / "cloudy";
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p::first-line {
+            color: #049f20;
+            font-variant: small-caps;
+        }
+
+        p::selection {
+            color: rgb(0, 204, 255);
+            background-color: black;
+            font-size: 30px;
+        }
+
+        ::marker {
+            color: rgb(60, 0, 255);
+            font-size: 30px;
+            /* content: "🎮 " / "games";*/
+        }
+
+        a:link {
+            color: white;
+            background-color: rgb(12, 217, 108);
+            border: 2px solid white;
+        }
+
+        a:visited {
+            color: white;
+            background-color: brown;
+            border: 2px solid white;
+        }
+
+        a:hover {
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    1. Pseudo Elements
+    2. HTML List
+    3. Pseudo Classes
+    4. MDN Reference
+    -->
+
+    <!--Pseudo Elements-->
+    <h1>Hello Guys</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis dolor impedit commodi velit, ipsa
+        similique, ex eveniet optio assumenda dolorem quod culpa amet ipsum voluptates. Error voluptas cumque tempore
+        rerum adipisci ipsam vitae quis, ipsum voluptate labore! Aliquid dolores repellendus nisi, veritatis officia
+        totam quos enim voluptas? Dolorum! </p>
+
+    <!--HTML List-->
+    <!--Ordered Lists-->
+    <h1>Fruits(Ordered Lists)</h1>
+    <ol type="1">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+        <li>Strawberry</li>
+    </ol>
+
+    <!--Unordered lists-->
+    <h1>Fruits(Unordered lists)</h1>
+    <ul type="circle">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+        <li>Strawberry</li>
+    </ul>
+
+    <!--HTML Description List-->
+    <h1>HTML Description List of Front end Modules</h1>
+    <dl>
+        <dt>HTML :</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita praesentium optio alias neque, culpa
+            aliquam quas ipsam magnam obcaecati hic quibusdam? Quia tenetur saepe iure beatae eum cumque, fuga veniam?
+        </dd>
+        <dt>CSS :</dt>
+        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellendus consectetur, provident ea
+            atque harum corrupti ab totam in at minus optio maiores repudiandae consequuntur minima ad deleniti iste
+            itaque.
+        </dd>
+        <dt>JavaScript :</dt>
+        <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, distinctio fugit aliquam neque
+            molestiae optio? Distinctio eius alias, unde inventore perferendis, obcaecati velit repudiandae sunt maxime
+            iure nobis. Nostrum, consequatur.
+        </dd>
+    </dl>
+
+    <!--Pseudo Classes-->
+    <b><a href="../Day-9/demo10.html" target="_blank">This is a link</a></b>
+
+</body>
+
+</html>

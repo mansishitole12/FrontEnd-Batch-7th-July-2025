@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo4 - Services List</title>
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #f0f8ff, #d6eaf8);
+      padding: 50px;
+      color: #222;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #2c3e50;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    /* ===== Services List Styling ===== */
+    ul.services {
+      list-style: none; /* Remove default bullets */
+      max-width: 600px;
+      margin: auto;
+      padding: 0;
+    }
+
+    ul.services li {
+      background: #ffffff;
+      margin: 12px 0;
+      padding: 15px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* ===== Pseudo Element (custom bullet icon) ===== */
+    ul.services li::before {
+      content: "✔"; /* Add tick mark */
+      color: green;
+      font-weight: bold;
+      margin-right: 10px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* ===== Pseudo Class (hover effect) ===== */
+    ul.services li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background: #eafaf1;
+    }
+
+    /* Highlight 2nd service differently using nth-child pseudo-class */
+    ul.services li:nth-child(2) {
+      background: #fef9e7;
+      border-left: 6px solid #f7c600;
+    }
+
+    /* ===== Footer with MDN Reference ===== */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #00509e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Title Section -->
+  <h2>Our Professional Services</h2>
+
+  <!-- Services List -->
+  <ul class="services">
+    <li>Custom Web & App Development</li>
+    <li>UI/UX Design for Modern Brands</li>
+    <li>SEO & Digital Marketing</li>
+    <li>Corporate IT Training & Workshops</li>
+    <li>Cloud Deployment & DevOps Consulting</li>
+  </ul>
+
+  <!-- Footer with MDN Reference -->
+  <footer>
+    <p>Learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">CSS Pseudo-classes on MDN</a>.</p>
+  </footer>
+</body>
+</html>

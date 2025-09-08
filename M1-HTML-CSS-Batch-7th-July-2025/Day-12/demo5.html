@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo5 - Pricing Table</title>
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    /* ===== Pricing Card ===== */
+    .pricing {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative; /* for pseudo-elements */
+    }
+
+    /* ===== Hover Effect (Pseudo Class) ===== */
+    .pricing:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Plan Titles ===== */
+    .pricing h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #2c3e50;
+      position: relative;
+    }
+
+    /* ===== Pseudo Element (Ribbon on Pro Plan) ===== */
+    .pricing.pro::before {
+      content: "POPULAR";
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      background: #f39c12;
+      color: white;
+      padding: 5px 40px;
+      font-size: 12px;
+      font-weight: bold;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Price Styling ===== */
+    .pricing p.price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #27ae60;
+      margin: 15px 0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* ===== Feature List (HTML List) ===== */
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .features li {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #555;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    /* ===== Pseudo Element (Custom Bullet Icons) ===== */
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    /* ===== Call-to-Action Button ===== */
+    .pricing a {
+      display: inline-block;
+      text-decoration: none;
+      background: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    .pricing a:hover {
+      background: #1f618d;
+    }
+
+    /* ===== Highlight First Card (Pseudo Class) ===== */
+    .pricing:first-child {
+      border: 2px solid #27ae60;
+    }
+
+    /* ===== Footer with MDN Reference ===== */
+    footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Basic Plan -->
+  <div class="pricing">
+    <h3>Basic Plan</h3>
+    <p class="price">$10/month</p>
+    <ul class="features">
+      <li>5 GB Storage</li>
+      <li>Email Support</li>
+      <li>Basic Analytics</li>
+    </ul>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <!-- Pro Plan with Ribbon -->
+  <div class="pricing pro">
+    <h3>Pro Plan</h3>
+    <p class="price">$20/month</p>
+    <ul class="features">
+      <li>50 GB Storage</li>
+      <li>Priority Support</li>
+      <li>Advanced Analytics</li>
+      <li>Team Collaboration</li>
+    </ul>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <!-- Enterprise Plan -->
+  <div class="pricing">
+    <h3>Enterprise Plan</h3>
+    <p class="price">$50/month</p>
+    <ul class="features">
+      <li>Unlimited Storage</li>
+      <li>Dedicated Manager</li>
+      <li>Custom Integrations</li>
+      <li>24/7 Premium Support</li>
+    </ul>
+    <a href="#">Choose Plan</a>
+  </div>
+
+  <!-- Footer with MDN Reference -->
+  <footer>
+    <p>Learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">CSS Pseudo-elements on MDN</a>.</p>
+  </footer>
+
+</body>
+</html>

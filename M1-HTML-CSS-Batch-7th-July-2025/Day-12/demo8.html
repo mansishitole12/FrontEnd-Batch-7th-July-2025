@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo8 - Customer Testimonials</title>
+  <style>
+    /* ===== Global Page Styling ===== */
+    body {
+      background: linear-gradient(to right, #f9f9f9, #e3f2fd);
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 50px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      position: relative;
+    }
+
+    /* Decorative underline using ::after */
+    h1::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #3498db;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    /* ===== Testimonial List Styling ===== */
+    ul.testimonials {
+      list-style-type: none; /* remove default bullets */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    ul.testimonials li {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Custom quotation mark using ::before */
+    ul.testimonials li::before {
+      content: "❝";
+      font-size: 40px;
+      color: #3498db;
+      position: absolute;
+      top: -15px;
+      left: 15px;
+      opacity: 0.7;
+    }
+
+    /* Hover effect using pseudo-class */
+    ul.testimonials li:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Author name styling */
+    .author {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    /* ===== Reference Section ===== */
+    .reference {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .reference a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .reference a:hover {
+      color: #e67e22;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Heading -->
+  <h1>What Our Clients Say</h1>
+
+  <!-- Testimonials in HTML List -->
+  <ul class="testimonials">
+    <li>
+      <p>“The web development service transformed our online presence. Highly professional team!”</p>
+      <p class="author">— Sarah Johnson, Startup Founder</p>
+    </li>
+    <li>
+      <p>“I loved the UI/UX design — clean, modern, and user-friendly. Customers are more engaged now.”</p>
+      <p class="author">— Michael Smith, E-commerce Owner</p>
+    </li>
+    <li>
+      <p>“Their SEO strategies helped us rank #1 on Google within months. Amazing results!”</p>
+      <p class="author">— Priya Patel, Marketing Manager</p>
+    </li>
+  </ul>
+
+  <!-- MDN Reference Section -->
+  <div class="reference">
+    📘 Learn more about CSS pseudo-elements & pseudo-classes at 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">
+      MDN Web Docs
+    </a>.
+  </div>
+</body>
+</html>

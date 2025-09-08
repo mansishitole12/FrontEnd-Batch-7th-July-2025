@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo7 - Nature Gallery</title>
+  <style>
+    /* ====== General Page Styling ====== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    /* ::after pseudo-element adds a decorative underline */
+    h1::after {
+      content: "";
+      display: block;
+      margin: 10px auto;
+      width: 80px;
+      height: 3px;
+      background: #00ff88;
+      border-radius: 2px;
+    }
+
+    /* ====== Gallery Section ====== */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* :hover pseudo-class for interactive effect */
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0, 255, 136, 0.6);
+    }
+
+    /* ====== Services List Section ====== */
+    .services {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 60%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00ff88;
+    }
+
+    ul {
+      list-style-type: none; /* Remove default bullets */
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 18px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    /* Custom ✔️ bullets using ::before */
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: -30px;
+      color: #00ff88;
+      font-size: 20px;
+    }
+
+    /* :hover pseudo-class to highlight list items */
+    ul li:hover {
+      background: rgba(0, 255, 136, 0.2);
+    }
+
+    /* ====== Reference Section ====== */
+    .reference {
+      margin: 40px auto;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    .reference a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    /* :hover pseudo-class changes link color */
+    .reference a:hover {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Heading -->
+  <h1>Nature Photography Gallery</h1>
+
+  <!-- Gallery Section with real images -->
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain Landscape">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean Waves">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Forest Path">
+    <img src="https://images.unsplash.com/photo-1519817914152-22f90e6c2c1c" alt="Desert Dunes">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Snowy Mountains">
+  </div>
+
+  <!-- Services List Section -->
+  <div class="services">
+    <h2>Our Photography Services</h2>
+    <ul>
+      <li>Wildlife Photography</li>
+      <li>Landscape Photography</li>
+      <li>Drone Shoots</li>
+      <li>Event Coverage</li>
+      <li>Corporate Visual Branding</li>
+    </ul>
+  </div>
+
+  <!-- MDN Reference Section -->
+  <div class="reference">
+    <p>📘 Learn more about CSS selectors, pseudo-elements, and pseudo-classes at 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">
+        MDN Web Docs
+      </a>.
+    </p>
+  </div>
+</body>
+</html>

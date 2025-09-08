@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional Profile Card - Demo</title>
+  <style>
+    /* ===== Global Page Styling ===== */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3); /* soft gradient background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Full screen height */
+      margin: 0;
+    }
+
+    /* ===== Profile Card Container ===== */
+    .card {
+      background: #fff;
+      padding: 30px;
+      width: 350px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* shadow for depth */
+      position: relative;
+      text-align: center;
+      transition: transform 0.3s ease; /* smooth hover effect */
+    }
+
+    /* ===== Pseudo Element Example ===== */
+    .card::before {
+      content: "★"; /* star as a decorative element */
+      font-size: 40px;
+      color: gold;
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* ===== Hover Effect (Pseudo Class) ===== */
+    .card:hover {
+      transform: scale(1.05); /* zoom effect on hover */
+    }
+
+    /* ===== Profile Picture Styling ===== */
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Name with Text Shadow ===== */
+    .card h2 {
+      margin: 10px 0;
+      color: #333;
+      text-shadow: 2px 2px 5px #aaa; /* adds depth to text */
+    }
+
+    /* ===== Role / Title Styling ===== */
+    .card p {
+      color: #555;
+      margin: 5px 0 20px;
+      font-size: 14px;
+    }
+
+    /* ===== HTML List Styling ===== */
+    .skills {
+      list-style-type: square;
+      text-align: left;
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .skills li {
+      margin: 6px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .skills li::before {
+      content: "✔ "; /* using pseudo-element for checkmark */
+      color: green;
+      font-weight: bold;
+    }
+
+    /* ===== Link Styling with Pseudo Classes ===== */
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #fff;
+      background: #f76c6c;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .card a:hover {
+      background: #ff3b3b; /* hover color change */
+    }
+    .card a:active {
+      background: #cc0000; /* active state color */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- ===== Profile Card Section ===== -->
+  <div class="card">
+    <!-- Profile Image -->
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Picture" class="profile-pic">
+
+    <!-- Profile Information -->
+    <h2>Shalini Verma</h2>
+    <p>Full Stack Developer | Corporate Trainer</p>
+
+    <!-- HTML List Example -->
+    <h3>Core Skills:</h3>
+    <ul class="skills">
+      <li>Java & Python Development</li>
+      <li>MERN Stack</li>
+      <li>Data Analytics</li>
+      <li>Corporate Training</li>
+    </ul>
+
+    <!-- External Reference (MDN Link) -->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">
+      Learn Pseudo Elements (MDN)
+    </a>
+  </div>
+</body>
+</html>

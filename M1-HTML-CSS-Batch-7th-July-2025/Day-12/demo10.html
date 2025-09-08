@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo10 - Contact Form</title>
+  <style>
+    /* ===== Global Page Styling ===== */
+    body {
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* ===== Contact Form Container ===== */
+    .form-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      width: 340px;
+      backdrop-filter: blur(8px); /* Glass effect */
+    }
+
+    /* Form Heading */
+    .form-box h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #2c3e50;
+      position: relative;
+    }
+
+    /* Decorative underline using ::after */
+    .form-box h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #f76c6c;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ===== Input and Textarea Styling ===== */
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 12px 0;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    /* Focus effect using pseudo-class */
+    .form-box input:focus,
+    .form-box textarea:focus {
+      border-color: #f76c6c;
+      box-shadow: 0 0 12px rgba(247, 108, 108, 0.6);
+      outline: none;
+    }
+
+    /* Placeholder style using ::placeholder */
+    .form-box input::placeholder,
+    .form-box textarea::placeholder {
+      color: #999;
+      font-style: italic;
+    }
+
+    /* ===== Button Styling ===== */
+    .form-box button {
+      background: #f76c6c;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    /* Hover effect using pseudo-class */
+    .form-box button:hover {
+      background: #ff3b3b;
+      box-shadow: 0 4px 12px rgba(255, 59, 59, 0.5);
+    }
+
+    /* ===== Contact Details List ===== */
+    .contact-details {
+      margin-top: 20px;
+      padding-left: 18px;
+    }
+
+    .contact-details li {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #333;
+      position: relative;
+    }
+
+    /* Icon bullets using ::before */
+    .contact-details li::before {
+      position: absolute;
+      left: -18px;
+      color: #f76c6c;
+      font-weight: bold;
+    }
+
+    .contact-details li:nth-child(1)::before {
+      content: "📞 ";
+    }
+
+    .contact-details li:nth-child(2)::before {
+      content: "✉️ ";
+    }
+
+    .contact-details li:nth-child(3)::before {
+      content: "📍 ";
+    }
+
+    /* ===== MDN Reference Section ===== */
+    .reference {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .reference a {
+      color: #3498db;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .reference a:hover {
+      color: #e74c3c;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Contact Form Box -->
+  <div class="form-box">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="3" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Information (using HTML List) -->
+    <ul class="contact-details">
+      <li>+91 98765 43210</li>
+      <li>support@example.com</li>
+      <li>Mumbai, India</li>
+    </ul>
+
+    <!-- MDN Reference -->
+    <div class="reference">
+      📘 Learn more about 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">Pseudo-elements</a> 
+      and 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">Pseudo-classes</a>
+      on MDN Docs.
+    </div>
+  </div>
+</body>
+</html>

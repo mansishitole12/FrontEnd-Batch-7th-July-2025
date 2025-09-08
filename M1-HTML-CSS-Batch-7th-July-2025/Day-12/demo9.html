@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo9 - To Do List</title>
+  <style>
+    /* ===== Global Page Styling ===== */
+    body {
+      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+      font-family: "Segoe UI", Arial, sans-serif;
+      padding: 50px;
+      margin: 0;
+      color: #333;
+    }
+
+    /* Heading Styling */
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    /* Decorative line under heading using ::after */
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #3498db;
+      margin: 8px auto;
+      border-radius: 2px;
+    }
+
+    /* ===== To-Do List Container ===== */
+    ul.todo {
+      list-style: none; /* remove default bullets */
+      max-width: 500px;
+      margin: auto;
+      padding: 0;
+    }
+
+    /* Individual Task Styling */
+    ul.todo li {
+      background: #fff;
+      margin: 12px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: 0.3s ease;
+      font-size: 18px;
+    }
+
+    /* Custom bullet using ::before */
+    ul.todo li::before {
+      content: "✔";
+      color: #27ae60;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* Hover effect using pseudo-class */
+    ul.todo li:hover {
+      background: #eafaf1;
+      transform: translateX(5px);
+    }
+
+    /* Different background for the first task */
+    ul.todo li:first-child {
+      border-left: 6px solid #3498db;
+    }
+
+    /* Highlight the last task */
+    ul.todo li:last-child {
+      border-left: 6px solid #e67e22;
+    }
+
+    /* Styling for Links inside Tasks */
+    ul.todo li a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    ul.todo li a:hover {
+      color: #e67e22;
+      text-decoration: underline;
+    }
+
+    /* ===== Reference Section ===== */
+    .reference {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .reference a {
+      color: #3498db;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .reference a:hover {
+      color: #e74c3c;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Heading -->
+  <h2>Today's Tasks</h2>
+
+  <!-- To-Do List -->
+  <ul class="todo">
+    <li>Finish HTML & CSS assignment</li>
+    <li>Review CSS pseudo-classes and examples</li>
+    <li>Update portfolio project with new styling</li>
+    <li>Check <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">MDN Docs</a> for more details</li>
+  </ul>
+
+  <!-- MDN Reference Section -->
+  <div class="reference">
+    📘 Learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">CSS Pseudo-elements</a> 
+    and 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">Pseudo-classes</a> on MDN Web Docs.
+  </div>
+</body>
+</html>
