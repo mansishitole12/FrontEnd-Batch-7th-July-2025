@@ -1,0 +1,245 @@
+<!-- Demo9: Fitness Club Page (Upgraded & Commented) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo9 - FitLife Club</title>
+  <style>
+    /* ========= UNIVERSAL SELECTOR ========= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ========= BODY STYLING ========= */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #56ab2f, #a8e063); /* Gradient background */
+      color: #222; /* Type selector */
+    }
+
+    /* ========= HEADER ========= */
+    header {
+      background: #2e8b57; /* HEX color */
+      color: rgb(255, 255, 255); /* RGB color */
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* RGBA shadow */
+      border-bottom: 5px solid hsl(120, 60%, 30%); /* HSL color */
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.8); /* HSLA text shadow */
+    }
+
+    header p {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* ========= NAVIGATION BAR ========= */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #3cb371;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative; /* Required for pseudo-element */
+    }
+
+    /* Pseudo-class */
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Pseudo-element for underline effect */
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffd700;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ========= HERO SECTION ========= */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1594737625785-c06e67c6a7b6?fit=crop&w=1200&q=80') 
+        no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 6vh 2rem; /* Using vh unit */
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ========= PROGRAMS SECTION ========= */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 3rem 5vw; /* Using vw for spacing */
+    }
+
+    .program {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 0.2cm solid #32cd32; /* cm unit */
+      outline: 2pt dashed #006400; /* pt unit */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .program:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .program h3 {
+      margin-bottom: 1rem;
+      color: #2e8b57;
+      font-size: 1.4rem;
+    }
+
+    /* ========= BUTTONS ========= */
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #2e8b57;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff6347;
+    }
+
+    /* ========= TESTIMONIALS ========= */
+    .testimonials {
+      background: linear-gradient(to right, #f0fff0, #e6ffe6);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      margin-bottom: 1.5rem;
+      color: #006400;
+    }
+
+    .testimonial {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      max-width: 70ch; /* Using ch unit */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========= FOOTER ========= */
+    footer {
+      background: #2e8b57;
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      margin-top: 2rem;
+      border-top: 4px solid #006400;
+    }
+
+    /* ========= ATTRIBUTE SELECTOR ========= */
+    a[href^="http"] {
+      color: #1e90ff;
+    }
+
+    /* ========= COMBINATOR SELECTOR ========= */
+    .programs div + div {
+      margin-top: 0; /* Removes extra margin between adjacent program cards */
+    }
+  </style>
+</head>
+<body>
+  <!-- ======= HEADER ======= -->
+  <header id="main-header">
+    <h1>FitLife Club</h1>
+    <p>Your Health, Our Priority</p>
+  </header>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Programs</a>
+    <a href="#">Trainers</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- ======= HERO SECTION ======= -->
+  <section class="hero">
+    <h2>Transform Your Body, Transform Your Life</h2>
+    <p>Join our scientifically designed programs for all fitness levels.</p>
+  </section>
+
+  <!-- ======= PROGRAMS ======= -->
+  <section class="programs">
+    <div class="program">
+      <h3>🏋️ Strength Training</h3>
+      <p>Gain muscle and endurance with personalized workouts & expert guidance.</p>
+      <a href="#" class="btn">Join Now</a>
+    </div>
+    <div class="program">
+      <h3>🧘 Yoga & Meditation</h3>
+      <p>Improve flexibility, posture, and mental well-being through yoga sessions.</p>
+      <a href="#" class="btn">Join Now</a>
+    </div>
+    <div class="program">
+      <h3>🚴 Cardio & HIIT</h3>
+      <p>Burn calories, boost stamina, and energize your body with fun cardio workouts.</p>
+      <a href="#" class="btn">Join Now</a>
+    </div>
+    <div class="program">
+      <h3>🥗 Nutrition Coaching</h3>
+      <p>Get personalized diet plans and lifestyle tips for sustainable results.</p>
+      <a href="#" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- ======= TESTIMONIALS ======= -->
+  <section class="testimonials">
+    <h2>What Our Members Say</h2>
+    <p class="testimonial">“FitLife helped me lose 15kg and feel more energetic than ever!” – Priya</p>
+    <p class="testimonial">“The trainers are supportive, motivating, and truly care about progress.” – Arjun</p>
+    <p class="testimonial">“Yoga sessions improved my focus, balance, and mental health.” – Meera</p>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>© 2025 FitLife Club. Stay Strong. Stay Healthy.</p>
+    <p>Follow us: <a href="https://instagram.com" target="_blank">Instagram</a> | 
+    <a href="https://facebook.com" target="_blank">Facebook</a></p>
+  </footer>
+</body>
+</html>

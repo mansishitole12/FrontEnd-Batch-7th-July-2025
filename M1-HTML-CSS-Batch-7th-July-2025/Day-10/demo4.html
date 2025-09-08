@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Doe — Portfolio</title>
+  <style>
+    /* ========================
+       ROOT VARIABLES
+       ======================== */
+    :root {
+      --primary-color: #4b0082;       /* Indigo */
+      --secondary-color: #2e8b57;     /* SeaGreen */
+      --accent-color: #ff6347;        /* Tomato */
+      --bg-gradient: linear-gradient(120deg, #f0f8ff, #e6e6fa);
+      --radius: 12px;
+      --shadow-light: 2px 2px 8px rgba(0,0,0,0.3);
+      --shadow-heavy: 3px 3px 12px rgba(0,0,0,0.2);
+    }
+
+    /* ========================
+       UNIVERSAL RESET
+       ======================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* ========================
+       HEADER
+       ======================== */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--primary-color);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    /* ========================
+       NAVIGATION
+       ======================== */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Attribute selector & pseudo-classes */
+    nav ul li a[data-role="nav"] {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a[data-role="nav"]:hover {
+      border-color: var(--primary-color);
+      background-color: #fafafa;
+      box-shadow: var(--shadow-light);
+      transform: translateY(-2px);
+    }
+
+    /* ========================
+       SECTIONS
+       ======================== */
+    section {
+      margin: 2rem auto;
+      max-width: 900px;
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-heavy);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    /* ========================
+       PROJECT CARDS
+       ======================== */
+    .project {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-left: 5px solid var(--accent-color); /* Combinator & border styling */
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-heavy);
+    }
+
+    .project h3::first-letter {
+      color: var(--accent-color); /* Pseudo-element demo */
+      font-size: 1.4rem;
+    }
+
+    .project h3 {
+      color: #191970;
+      margin-bottom: 0.3rem;
+      font-size: 1.3rem;
+    }
+
+    .project p {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* ========================
+       CONTACT LINKS
+       ======================== */
+    #contact p a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    #contact p a:hover {
+      color: var(--accent-color);
+      text-shadow: 1px 1px 3px #333;
+    }
+
+    /* ========================
+       FOOTER
+       ======================== */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      border-top: 2px solid #333;
+      background: #fafafa;
+      border-radius: calc(var(--radius)/2);
+      box-shadow: var(--shadow-light);
+      font-size: 0.9rem;
+    }
+
+    /* ========================
+       RESPONSIVE DESIGN
+       ======================== */
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      section {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ========================
+       ADDITIONAL DEMOS
+       ======================== */
+    /* Color formats demo */
+    .color-demo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .color-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+
+    #hex { background: #ff4500; }      /* HEX */
+    #rgb { background: rgb(34,139,34); } /* RGB */
+    #hsl { background: hsl(240,100%,50%); } /* HSL */
+    #rgba { background: rgba(255,20,147,0.7); } /* RGBA */
+    #hsla { background: hsla(300,100%,40%,0.5); } /* HSLA */
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>💼 John Doe</h1>
+    <p>Full Stack Developer | Designer | Freelancer</p>
+    <nav>
+      <ul>
+        <li><a href="#about" data-role="nav">About</a></li>
+        <li><a href="#projects" data-role="nav">Projects</a></li>
+        <li><a href="#contact" data-role="nav">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m John, a passionate developer specializing in modern, responsive web apps. I love coding, designing, and solving real-world problems with technology.</p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>🌐 Portfolio Website</h3>
+      <p>A personal portfolio website built with HTML, CSS & JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>📊 Data Dashboard</h3>
+      <p>An interactive analytics dashboard built with ReactJS & Chart.js.</p>
+    </div>
+    <div class="project">
+      <h3>🛒 E-commerce Platform</h3>
+      <p>A responsive online shopping platform developed using MERN stack.</p>
+    </div>
+
+    <!-- Color format demo -->
+    <h3>🎨 Color Formats Demo</h3>
+    <div class="color-demo">
+      <div class="color-box" id="hex" title="HEX"></div>
+      <div class="color-box" id="rgb" title="RGB"></div>
+      <div class="color-box" id="hsl" title="HSL"></div>
+      <div class="color-box" id="rgba" title="RGBA"></div>
+      <div class="color-box" id="hsla" title="HSLA"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+    <p>GitHub: <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 John Doe | Crafted with ❤️</p>
+  </footer>
+
+</body>
+</html>

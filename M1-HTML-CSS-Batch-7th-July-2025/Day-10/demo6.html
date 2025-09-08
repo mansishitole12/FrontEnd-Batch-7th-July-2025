@@ -1,0 +1,228 @@
+<!-- Demo6: Event Invitation Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo6 - Event Invitation</title>
+  <style>
+    /* ===============================
+       UNIVERSAL SELECTOR
+       Resetting margins and paddings
+    =============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===============================
+       BODY STYLING
+       Demonstrating gradient background,
+       viewport units (vh, vw), and % padding
+    =============================== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f); /* gradient bg */
+      min-height: 100vh; /* vh unit */
+      padding: 5%;
+      color: #333;
+    }
+
+    /* ===============================
+       HEADER
+       Demonstrating type selectors,
+       HSL color, box-shadow, border-radius
+    =============================== */
+    header {
+      text-align: center;
+      padding: 1cm; /* cm unit */
+      background: hsl(39, 100%, 50%); /* HSL format */
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3); /* RGBA format */
+    }
+
+    header h1 {
+      font-size: 2.5rem; /* rem unit */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* text shadow */
+    }
+
+    header p {
+      font-size: 1.2em; /* em unit */
+      margin-top: 0.5rem;
+    }
+
+    /* ===============================
+       EVENT DETAILS SECTION
+       Demonstrating class selector,
+       border, outlines, shadows
+    =============================== */
+    .event-details {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: #fff;
+      border: 2px solid #ffa500; /* HEX format */
+      outline: 3pt dashed #6a5acd; /* pt unit */
+      border-radius: 12px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .event-details h2 {
+      color: rgb(106, 90, 205); /* RGB format */
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    .event-details p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    /* Demonstrating combinator: .event-details p + p */
+    .event-details p + p {
+      color: #444;
+    }
+
+    /* ===============================
+       IMAGE STYLING
+       Demonstrating border-radius,
+       image background properties
+    =============================== */
+    .event-details img {
+      display: block;
+      max-width: 100%;
+      margin: 1rem auto;
+      border-radius: 10px;
+      border: 5px solid #3cb371;
+      box-shadow: 0 0 20px hsla(147, 50%, 47%, 0.6); /* HSLA format */
+    }
+
+    /* ===============================
+       CALL TO ACTION BUTTON
+       Demonstrating attribute selector,
+       pseudo-classes :hover, :active,
+       and px units
+    =============================== */
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta a[href="#rsvp"] {
+      text-decoration: none;
+      background: #ff0000;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta a:hover {
+      background: #6a5acd;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta a:active {
+      background: #20b2aa;
+    }
+
+    /* ===============================
+       PSEUDO-ELEMENTS DEMO
+       Add a star before RSVP button
+    =============================== */
+    .cta a::before {
+      content: "★ ";
+    }
+
+    /* ===============================
+       FOOTER
+       Demonstrating % width, pc unit
+    =============================== */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #444;
+      padding: 0.5pc; /* pc unit */
+      background: rgba(255,255,255,0.6);
+      border-radius: 8px;
+    }
+
+    /* ===============================
+       COLOR FORMATS DEMO BOXES
+    =============================== */
+    .color-demo {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .color-box {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+
+    #hex { background: #ff4500; }
+    #rgb { background: rgb(34,139,34); }
+    #hsl { background: hsl(240,100%,50%); }
+    #rgba { background: rgba(255,20,147,0.7); }
+    #hsla { background: hsla(300,100%,40%,0.5); }
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>You're Invited!</h1>
+    <p>Annual Gala Night - 2025</p>
+  </header>
+
+  <!-- EVENT DETAILS -->
+  <section class="event-details">
+    <h2>Event Details</h2>
+    <p><strong>Date:</strong> 20th September 2025</p>
+    <p><strong>Time:</strong> 7:00 PM onwards</p>
+    <p><strong>Venue:</strong> Grand Ballroom, Mumbai International Hotel</p>
+
+    <img src="https://source.unsplash.com/800x400/?event,gala" alt="Event Image">
+
+    <p>
+      Join us for an evening filled with <span style="color:#ee82ee; font-weight:bold;">entertainment</span>, 
+      <span style="color:#ffa500; font-weight:bold;">networking</span>, and 
+      <span style="color:#3cb371; font-weight:bold;">celebration</span>. 
+      Dress code: Formal.
+    </p>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <div class="cta">
+    <a href="#rsvp">RSVP Now</a>
+  </div>
+
+  <!-- COLOR FORMATS DEMO -->
+  <div class="color-demo">
+    <div class="color-box" id="hex" title="HEX"></div>
+    <div class="color-box" id="rgb" title="RGB"></div>
+    <div class="color-box" id="hsl" title="HSL"></div>
+    <div class="color-box" id="rgba" title="RGBA"></div>
+    <div class="color-box" id="hsla" title="HSLA"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Gala Events. All rights reserved.</p>
+  </footer>
+</body>
+</html>

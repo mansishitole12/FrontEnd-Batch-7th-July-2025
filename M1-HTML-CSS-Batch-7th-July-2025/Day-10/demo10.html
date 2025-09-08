@@ -1,0 +1,246 @@
+<!-- Demo10: Restaurant Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo10 - Gourmet Delight</title>
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: linear-gradient(to right, #fff3e0, #ffe0b2);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ===== Header Section ===== */
+    header {
+      background: #d2691e;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #8b4513;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: url('https://picsum.photos/1200/500?food') no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* ===== Menu Section ===== */
+    .menu {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .menu h2 {
+      margin-bottom: 1.5rem;
+      color: #d2691e;
+      font-size: 2rem;
+      border-bottom: 3px solid #cd853f;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .dishes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .dish {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 2px solid #cd853f;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .dish:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .dish h3 {
+      margin-bottom: 0.5rem;
+      color: #8b0000;
+    }
+
+    .dish p {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #8b0000;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #ff6347;
+      transform: scale(1.05);
+    }
+
+    /* ===== About Section ===== */
+    .about {
+      background: #fff8dc;
+      padding: 3rem 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      border-top: 3px solid #d2691e;
+    }
+
+    .about h2 {
+      margin-bottom: 1rem;
+      color: #a0522d;
+      font-size: 1.8rem;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #8b4513;
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header Section ===== -->
+  <header>
+    <h1>Gourmet Delight</h1>
+    <p>Where Flavor Meets Tradition</p>
+  </header>
+
+  <!-- ===== Navigation Bar ===== -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Reservations</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h2>Experience Fine Dining Like Never Before</h2>
+    <p>Authentic cuisine crafted by world-class chefs</p>
+  </section>
+
+  <!-- ===== Menu Section ===== -->
+  <section class="menu">
+    <h2>Our Special Dishes</h2>
+    <div class="dishes">
+      <div class="dish">
+        <h3>🍝 Pasta Primavera</h3>
+        <p>Fresh vegetables and pasta tossed in olive oil.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="dish">
+        <h3>🥩 Grilled Steak</h3>
+        <p>Juicy tender steak with herbs and spices.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="dish">
+        <h3>🍲 Soup of the Day</h3>
+        <p>Warm, hearty, and made with seasonal ingredients.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="dish">
+        <h3>🍰 Chocolate Lava Cake</h3>
+        <p>Rich molten chocolate dessert with ice cream.</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      At Gourmet Delight, we bring together passion for food and love for tradition. 
+      Our chefs craft each dish with the finest ingredients to give you a truly delightful dining experience. 
+      Whether you're here for a casual meal or a special occasion, we promise flavors that stay with you forever.
+    </p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Gourmet Delight. All rights reserved.</p>
+  </footer>
+</body>
+</html>

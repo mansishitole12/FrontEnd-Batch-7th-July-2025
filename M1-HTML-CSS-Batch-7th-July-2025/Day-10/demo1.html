@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo1 — Startup Landing (Upgraded CSS Lab)</title>
+  <style>
+    /* ==========================
+       ROOT VARIABLES & BASELINE
+       ========================== */
+    :root{
+      --bg-0: #0f172a;                
+      --brand: #6a5acd;               
+      --accent: rgb(255,165,0);       
+      --success: hsl(147,50%,47%);    
+      --muted: rgba(255,255,255,0.85);
+      --glass: hsla(248,53%,58%,0.12);
+      --radius: 1rem;                 
+      --pad: 1.25rem;                 
+      --shadow-1: 0 8px 30px rgba(0,0,0,0.35);
+      --shadow-2: 0 4px 12px rgba(0,0,0,0.18);
+    }
+
+    /* Universal reset & font smoothing */
+    *{ box-sizing: border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    html{ font-size: 16px; }
+    body{
+      margin:0; min-height:100vh; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:
+        linear-gradient(180deg, rgba(10,12,20,0.55), rgba(10,12,20,0.85)) fixed,
+        url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop') center/cover fixed;
+      color: var(--muted);
+      line-height:1.5;
+      padding: clamp(1rem, 2vw, 2rem);
+    }
+
+    /* ==========================
+       HEADER / NAVIGATION
+       ========================== */
+    header#site-header{
+      display:flex; align-items:center; justify-content:space-between; gap:1rem; 
+      padding: .9rem 1.2rem; 
+      background: linear-gradient(90deg,#0b1220aa, var(--glass)); 
+      border-radius: calc(var(--radius) + .25rem); 
+      box-shadow: var(--shadow-2); 
+      border: 1px solid rgba(255,255,255,0.06); 
+    }
+    header h1{ 
+      font-size: clamp(1.25rem, 2.5vw, 1.9rem); color: #fff; letter-spacing:.4px; text-shadow: 0 6px 20px rgba(106,90,205,.25); 
+    }
+    nav a[data-role="nav"]{
+      color: #e6eef8; text-decoration:none; padding:.5rem .8rem; border-radius:.6rem; font-weight:600; transition:.2s;
+    }
+    nav a[data-role="nav"]:hover{
+      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(106,90,205,0.12)); transform: translateY(-2px); 
+    }
+
+    /* ==========================
+       HERO SECTION
+       ========================== */
+    .hero{
+      display:grid; grid-template-columns: 1fr 420px; gap: clamp(1rem,2vw,2rem);
+      align-items:center; padding: clamp(1.25rem,3vw,2.5rem); border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(106,90,205,0.12), rgba(39,39,44,0.32));
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: var(--shadow-1);
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+    .hero .kicker{ 
+      display:inline-block; padding:.25rem .6rem; border-radius:999px; background: rgba(255,165,0,.12); color: var(--accent); font-weight:700; margin-bottom:.8rem; 
+    }
+    .hero h2{ font-size: clamp(1.4rem, 3.2vw, 2.6rem); margin:0 0 .6rem; color: #fff; }
+    .hero p.lead{ color: rgba(255,255,255,0.9); font-size:1.05rem; margin-bottom:1rem; }
+
+    .cta{ display:flex; gap:.75rem; margin-top:.8rem; }
+    .btn{ background: var(--brand); color:#fff; border: none; padding:.7rem 1.1rem; border-radius: .75rem; font-weight:700; cursor:pointer; box-shadow: 0 8px 20px rgba(106,90,205,.25); transition: transform .18s ease, box-shadow .18s ease; }
+    .btn:hover{ transform: translateY(-4px); box-shadow: 0 18px 40px rgba(106,90,205,.32); }
+    .btn.secondary{ background: transparent; border: 2px solid rgba(255,255,255,0.12); color: #fff; }
+
+    /* HERO CARD IMAGE */
+    .card{ background: linear-gradient(180deg,#fff,#f6f7fb); color:#0f172a; padding:1rem; border-radius: .9rem; border: 1px solid rgba(0,0,0,.06); box-shadow: 0 8px 30px rgba(0,0,0,.08); }
+    .card img{ width:100%; height:260px; object-fit:cover; border-radius:.65rem; border: 6px solid rgba(106,90,205,.08); box-shadow: inset 0 -6px 20px rgba(0,0,0,.04); }
+
+    /* ==========================
+       FEATURES GRID
+       ========================== */
+    .features{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.2rem; }
+    .features .feature{ background: linear-gradient(180deg, rgba(255,255,255,0.95), #fff); padding:1rem; border-radius:.75rem; border:1px solid rgba(0,0,0,.06); box-shadow: var(--shadow-2); transition:.2s; }
+    .features .feature:hover{ transform: translateY(-3px); box-shadow: 0 12px 30px rgba(106,90,205,.18); }
+    .features .feature h3{ color: var(--brand); margin-bottom:.4rem; }
+    .features .feature + .feature{ border-top: 3px dashed rgba(106,90,205,.06); }
+
+    /* ==========================
+       COLOR SWATCHES & GRADIENTS
+       ========================== */
+    .swatches{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem; }
+    .swatch{ width:5.2rem; height:4rem; border-radius:.5rem; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#081018; font-weight:700; box-shadow: 0 8px 20px rgba(0,0,0,.12); border: 2px solid rgba(0,0,0,.06); }
+
+    .gradient-lab{ display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: .6rem; margin-top: .8rem; }
+    .grad{ height:90px; border-radius:.6rem; border:1px solid rgba(0,0,0,.06); box-shadow: var(--shadow-2); }
+
+    /* ==========================
+       PRACTICE LAB
+       ========================== */
+    #box{ background: #0000ff; color: #fff; padding: 1.2rem; border-radius: .6rem; width: 90%; max-width: 680px; margin:1rem auto; text-align:center; box-shadow: 0 12px 30px rgba(0,0,255, .18); outline: 6px solid rgba(255,255,255,.06); outline-offset: 8px; }
+    #box1 > .inner > div{ flex:1 1 80px; padding:.6rem; border-radius:.4rem; color:#fff; text-align:center; transition:.3s; }
+    #box1 > .inner > div:hover{ transform: scale(1.1); box-shadow: 0 12px 25px rgba(0,0,0,.12); }
+
+    .shadow-sample{ padding: .8rem; border-radius: .6rem; background:#fff; color:#111; font-weight:700; text-align:center; transition:.2s; }
+    .shadow-sample:hover{ transform: translateY(-3px); }
+
+    /* ==========================
+       FOOTER
+       ========================== */
+    footer{ margin-top:2rem; color: rgba(255,255,255,.9); text-align:center; font-size:.95rem; }
+    footer p::before{ content: '💡 '; }
+
+    /* ==========================
+       RESPONSIVENESS
+       ========================== */
+    @media (max-width:880px){ .hero{ grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header / Nav -->
+    <header id="site-header">
+      <h1>InnoTech — Analytics for Humans</h1>
+      <nav>
+        <a data-role="nav" href="#features">Features</a>
+        <a data-role="nav" href="#swatches">Colors</a>
+        <a data-role="nav" href="#practice">Practice</a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" role="region" aria-label="Hero">
+      <div>
+        <span class="kicker">New · 2025</span>
+        <h2>Analytics dashboards made simple — ship insights faster</h2>
+        <p class="lead">From funnel analysis to revenue forecasting — lightweight tooling for early-stage teams. Try the free plan for 5 users.</p>
+        <div class="cta">
+          <button class="btn">Start Free Trial</button>
+          <button class="btn secondary">Request Demo</button>
+        </div>
+
+        <!-- Feature list -->
+        <div class="features" id="features">
+          <div class="feature">
+            <h3>Real-time Dashboards</h3>
+            <p>Visualize events with sub-second latency (<em>ms</em> updates).</p>
+          </div>
+          <div class="feature">
+            <h3>Export & Share</h3>
+            <p>Export charts to CSV, XLSX, and PDF. Embed dashboards on websites.</p>
+          </div>
+          <div class="feature">
+            <h3>Integrations</h3>
+            <p>Stripe, Razorpay, Shopify, Google Sheets — plug and play connectors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO CARD IMAGE -->
+      <aside class="card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Dashboard screenshot placeholder">
+        <p style="margin-top:.6rem; font-weight:600; color:#374151;">Prototype dashboard — hover the chart to reveal details.</p>
+      </aside>
+    </section>
+
+    <!-- COLORS & GRADIENTS -->
+    <section class="card" id="swatches">
+      <h2 style="color:var(--brand)">Color Reference</h2>
+      <p>Examples of color formats (HEX, RGB, HSL, RGBA, HSLA) used across the site.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#ff0000;">#ff0000</div>
+        <div class="swatch" style="background:#ffa500;">#ffa500</div>
+        <div class="swatch" style="background:#3cb371;">#3cb371</div>
+        <div class="swatch" style="background:#ee82ee;">#ee82ee</div>
+        <div class="swatch" style="background:#0000ff; color:#fff;">#0000ff</div>
+        <div class="swatch" style="background:rgb(60,179,113);">rgb(60,179,113)</div>
+        <div class="swatch" style="background:hsl(248,53%,58%);">hsl(248,53%,58%)</div>
+        <div class="swatch" style="background:rgba(106,90,205,0.85); color:#fff">rgba(106,90,205,.85)</div>
+        <div class="swatch" style="background:hsla(39,100%,50%,.9);">hsla(39,100%,50%,.9)</div>
+      </div>
+
+      <div class="gradient-lab">
+        <div class="grad" style="background-image: linear-gradient(to right, red, orange, yellow);"></div>
+        <div class="grad" style="background-image: radial-gradient(circle, red 5%, yellow 15%, green 60%);"></div>
+        <div class="grad" style="background-image: conic-gradient(from 90deg, red, yellow, green, blue);"></div>
+        <div class="grad" style="background-image: repeating-linear-gradient(90deg, #ff0000, #ff0000 10%, #00ff00 10%, #00ff00 20%);"></div>
+      </div>
+    </section>
+
+    <!-- PRACTICE LAB -->
+    <section class="card" id="practice">
+      <h2 style="color:var(--brand)">Practice Lab</h2>
+      <p>Hands-on: experiments with units, borders, shadows, and selectors.</p>
+      <div id="box">
+        <h3 style="margin-bottom:.5rem;">#box — Web Technologies</h3>
+        <p style="opacity:.95;">Html, CSS, Javascript, jQuery, Bootstrap, React</p>
+        <div id="box1" style="margin-top:1rem;">
+          <div class="inner">
+            <div class="b-dotted" style="background:#ffcccb;">px</div>
+            <div class="b-dashed" style="background:#ffe4b5;">em</div>
+            <div class="b-double" style="background:#d1e7dd;">rem</div>
+            <div class="b-groove" style="background:#e9d5ff;">%</div>
+          </div>
+        </div>
+
+        <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center;">
+          <div class="shadow-sample bs-1 ts-1">text-shadow & box-shadow</div>
+          <div class="shadow-sample bs-2 ts-2">multiple-shadow demo</div>
+        </div>
+      </div>
+
+      <!-- GRID OF BORDER STYLE BOXES -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:.6rem; margin-top:1rem;">
+        <div id="box2" class="b-solid" style="padding:.8rem; background:#fff; color:#111; border-radius:8px;">Solid border</div>
+        <div id="box3" class="b-inset" style="padding:.8rem;">Inset border</div>
+        <div id="box4" class="b-outset" style="padding:.8rem;">Outset border</div>
+        <div id="box5" class="b-ridge" style="padding:.8rem;">Ridge border</div>
+        <div id="box6" class="b-groove" style="padding:.8rem;">Groove border</div>
+        <div id="box7" class="b-double" style="padding:.8rem;">Double border</div>
+        <div id="box8" class="b-dashed" style="padding:.8rem;">Dashed border</div>
+        <div id="box9" class="b-dotted" style="padding:.8rem;">Dotted border</div>
+        <div id="box10" style="padding:.8rem; background:linear-gradient(90deg,#fff,#f3f0ff); border-radius:12px;">Image Frame</div>
+      </div>
+
+      <div style="margin-top:1rem; display:flex; justify-content:center;">
+        <img src="https://images.unsplash.com/photo-1526378722168-5f7f9ff5b1c9?q=80&w=900&auto=format&fit=crop" alt="frame" style="width:320px; height:180px; object-fit:cover; border-radius:12px; border:6px solid #6a5acd; box-shadow: 0 18px 40px rgba(106,90,205,.14);" />
+      </div>
+
+      <div class="ruler">
+        <div class="bar"></div>
+        <small>Ruler: height uses <code>1cm</code> and border uses <code>1pt</code> — absolute unit demo.</small>
+      </div>
+    </section>
+
+    <footer>
+      <p>Tip: Use developer tools to toggle CSS values and try different units/colors.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise Café — Menu & CSS Lab</title>
+  <style>
+    /* =========================
+       ROOT VARIABLES
+       ========================= */
+    :root {
+      --primary-color: #8b4513;     /* HEX - SaddleBrown */
+      --accent-color: #ff6347;      /* HEX - Tomato */
+      --highlight: #ffd700;         /* HEX - Gold */
+      --bg-light: #fff8dc;          /* HEX - Cornsilk */
+      --shadow-1: 0 4px 10px rgba(0,0,0,0.3);
+      --shadow-2: 0 8px 20px rgba(0,0,0,0.2);
+      --radius: 1rem;
+      --glass: rgba(255,255,255,0.12);
+    }
+
+    /* =========================
+       UNIVERSAL RESET & BASE
+       ========================= */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right, var(--bg-light), #ffe4b5) fixed;
+      color: #333;
+      padding: 1rem;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+    header {
+      background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      box-shadow: var(--shadow-1);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+
+    header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
+    header p { font-style: italic; font-size: 1.1rem; }
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+    nav {
+      background: #d2691e;
+      padding: 1rem;
+      text-align: center;
+      border-radius: calc(var(--radius)/2);
+      margin-bottom: 2rem;
+    }
+
+    /* Attribute selector demonstration */
+    nav a[data-role="nav"] {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: 0.3s ease;
+    }
+
+    nav a[data-role="nav"]:hover {
+      background: var(--accent-color);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO / MENU SECTION
+       ========================= */
+    .menu {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: #8b0000;
+      text-decoration: underline;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Item card with pseudo-class hover */
+    .item {
+      background: #fff;
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 2px solid #deb887;
+      box-shadow: var(--shadow-2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    }
+
+    /* Pseudo-element first-letter */
+    .item h3::first-letter {
+      color: #8b0000;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .price {
+      color: #2e8b57;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* Button styling */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       CSS PRACTICE LAB
+       ========================= */
+    .lab {
+      padding: 2rem;
+      background: #fafad2;
+      margin-top: 3rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-1);
+    }
+
+    .lab h2 { text-align: center; margin-bottom: 1rem; }
+    .lab h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
+
+    /* Box with shadow and outline demo */
+    #box {
+      width: 150px;
+      height: 150px;
+      background: #add8e6;
+      border: 3px solid #000;
+      margin: 1rem auto;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+      outline: 2px dashed red;
+      outline-offset: 6px;
+      border-radius: 12px;
+    }
+
+    .shadow-text {
+      text-align: center;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 6px #444;
+    }
+
+    /* Color box grid using different formats */
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .boxes div {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      border: 1px solid #111;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #box1 { background: #ff0000; }
+    #box2 { background: rgb(0,128,0); }
+    #box3 { background: hsl(200,70%,50%); }
+    #box4 { background: rgba(0,0,255,0.6); }
+    #box5 { background: hsla(50,90%,60%,0.8); }
+    #box6 { background: #ffa500; }
+    #box7 { background: rgb(128,0,128); }
+    #box8 { background: hsl(120,60%,40%); }
+    #box9 { background: rgba(255,20,147,0.7); }
+    #box10 { background: hsla(300,100%,40%,0.5); }
+
+    /* Gradient demo */
+    .gradient-demo {
+      height: 120px;
+      max-width: 600px;
+      margin: 1rem auto;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      border-radius: 12px;
+      border: 2px solid #000;
+      box-shadow: var(--shadow-2);
+    }
+
+    /* Units demo */
+    .units-demo p {
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+    footer {
+      background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      border-radius: calc(var(--radius)/2);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* =========================
+       MEDIA QUERIES
+       ========================= */
+    @media(max-width:768px) {
+      .items { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Sunrise Café</h1>
+    <p>Fresh Brews & Homemade Goodness</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a data-role="nav" href="#">Home</a>
+    <a data-role="nav" href="#">Menu</a>
+    <a data-role="nav" href="#">Specials</a>
+    <a data-role="nav" href="#">Contact</a>
+  </nav>
+
+  <!-- MENU SECTION -->
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="items">
+      <div class="item">
+        <h3>☕ Cappuccino</h3>
+        <p>Rich espresso with steamed milk and froth.</p>
+        <p class="price">₹120</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="item">
+        <h3>🥐 Croissant</h3>
+        <p>Flaky buttery delight, baked fresh daily.</p>
+        <p class="price">₹80</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="item">
+        <h3>🍰 Cheesecake</h3>
+        <p>Creamy cheesecake with strawberry topping.</p>
+        <p class="price">₹150</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+      <div class="item">
+        <h3>🍵 Matcha Latte</h3>
+        <p>Green tea blended with steamed milk and a hint of honey.</p>
+        <p class="price">₹140</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS PRACTICE LAB -->
+  <section class="lab">
+    <h2>🎨 CSS Practice Zone</h2>
+    <div id="box"></div>
+    <p class="shadow-text">This is text with shadow effect</p>
+
+    <h3>Color Showcase (HEX, RGB, HSL, RGBA, HSLA)</h3>
+    <div class="boxes">
+      <div id="box1"></div>
+      <div id="box2"></div>
+      <div id="box3"></div>
+      <div id="box4"></div>
+      <div id="box5"></div>
+      <div id="box6"></div>
+      <div id="box7"></div>
+      <div id="box8"></div>
+      <div id="box9"></div>
+      <div id="box10"></div>
+    </div>
+
+    <h3>Gradient Example</h3>
+    <div class="gradient-demo"></div>
+
+    <h3>Units in Action</h3>
+    <div class="units-demo">
+      <p style="font-size:16px">Font size in px (16px)</p>
+      <p style="font-size:1em">Font size in em (1em)</p>
+      <p style="font-size:1.2rem">Font size in rem (1.2rem)</p>
+      <p style="width:50%">Width set in % (50%)</p>
+      <p style="font-size:2vw">Font size in vw (2vw)</p>
+      <p style="font-size:2vh">Font size in vh (2vh)</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sunrise Café. Brewed with love ☕</p>
+  </footer>
+
+</body>
+</html>
