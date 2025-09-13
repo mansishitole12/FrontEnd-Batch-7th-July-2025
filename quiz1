@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-LearnHub | Quiz</title>
+  <style>
+  /* Navbar */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
 
+    /* Header */
+    header {
+      background: #8b5279;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    /* Navbar */
+    nav {
+      background: #8b5279;
+      text-align: center;
+      padding: 0.7rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffd54f;
+    }
+
+    /* Progress Bar */
+    .progress {
+      background: #ede7f6;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: #8b5279;
+    }
+
+    /* Main Section */
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b5279;
+    }
+
+    .instructions {
+      background: #f3e5f5;
+      padding: 15px;
+      border-left: 5px solid #8b5279;
+      border-radius: 5px;
+      margin: 1rem 0 2rem 0;
+    }
+
+    /* Questions */
+    .question {
+      margin-bottom: 1.5rem;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+
+    .question h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.3rem 0;
+      cursor: pointer;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #8b5279;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background: #8b5279;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #8b5279;
+      color: #fff;
+      padding: 15px;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="Home" id="Home">E-LearnHub</header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="./demo2.html">Home</a>
+    <a href="./demo3.html">Courses</a>
+    <a href="#Quiz">Quiz</a>
+    <a href="./demo4.html">Contact</a>
+  </nav>
+
+  <!-- Main -->
+  <main class="Courses" id="Courses">
+    <h2>HTML & CSS Fundamentals Quiz</h2>
+
+    <div class="instructions">
+      <p><strong>Instructions:</strong></p>
+      <ul>
+        <li>Read each question carefully.</li>
+        <li>Select the correct answer.</li>
+        <li>Click <b>Submit Quiz</b> when finished.</li>
+      </ul>
+    </div>
+
+    <form>
+      <!-- Q1 -->
+      <div class="question" id="Quiz">
+        <h3>A. Which tag is used for the largest heading in HTML?</h3>
+        <label><input type="radio" name="q1"> &lt;h1&gt;</label>
+        <label><input type="radio" name="q1"> &lt;h6&gt;</label>
+        <label><input type="radio" name="q1"> &lt;header&gt;</label>
+        <label><input type="radio" name="q1"> &lt;p&gt;</label>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question">
+        <h3>B. Which property is used to change text color in CSS?</h3>
+        <label><input type="radio" name="q2"> font-style</label>
+        <label><input type="radio" name="q2"> color</label>
+        <label><input type="radio" name="q2"> text-decoration</label>
+        <label><input type="radio" name="q2"> background</label>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question">
+        <h3>C. Which attribute is used to add a link in HTML?</h3>
+        <label><input type="radio" name="q3"> src</label>
+        <label><input type="radio" name="q3"> href</label>
+        <label><input type="radio" name="q3"> alt</label>
+        <label><input type="radio" name="q3"> title</label>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question">
+        <h3>D. Which CSS property is used to create space inside an element?</h3>
+        <label><input type="radio" name="q4"> margin</label>
+        <label><input type="radio" name="q4"> padding</label>
+        <label><input type="radio" name="q4"> border</label>
+        <label><input type="radio" name="q4"> outline</label>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question">
+        <h3>E. Which tag is used to insert an image in HTML?</h3>
+        <label><input type="radio" name="q5"> &lt;picture&gt;</label>
+        <label><input type="radio" name="q5"> &lt;src&gt;</label>
+        <label><input type="radio" name="q5"> &lt;img&gt;</label>
+        <label><input type="radio" name="q5"> &lt;image&gt;</label>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Quiz</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+   <div class="Contact" id="Contact"> 
+  <footer>&copy; 2025 E-LearnHub. All rights reserved.
+                Contact - 0987123456
+  </footer>
+  </div>
+
+</body>
+</html>
